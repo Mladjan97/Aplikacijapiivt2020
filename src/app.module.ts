@@ -11,6 +11,10 @@ import { ProductMaterial } from 'entities/product-material.entity';
 import { ProductPrice } from 'entities/product-price.entity';
 import { Product } from 'entities/product.entity';
 import { AdministratorController } from './controllers/api/administrator.controller';
+import { CategoryController } from './controllers/api/category.controller';
+import { CategoryService } from './services/category/category.service';
+import { ProductService } from './services/product/product.service';
+import { ProductController } from './controllers/api/product.controller';
 
 @Module({
   imports: [
@@ -31,12 +35,22 @@ import { AdministratorController } from './controllers/api/administrator.control
          Product
         ]
     }),
-    TypeOrmModule.forFeature([ Administrator ])
+    TypeOrmModule.forFeature([ 
+      Administrator,
+      Category,
+      Product,
+    ])
   ],
   controllers: [
     AppController,
     AdministratorController,
+    CategoryController,
+    ProductController,
   ],
-  providers: [AdministratorService],
+  providers: [
+    AdministratorService,
+    CategoryService,
+    ProductService,
+  ],
 })
 export class AppModule {}
