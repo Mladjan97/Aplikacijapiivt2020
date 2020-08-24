@@ -9,21 +9,24 @@ import {
 import { Product } from "./product.entity";
 
 @Index("fk_in_stock_priduct_id", ["productId"], {})
+@Index("uq_in_stock_size_color_product_id", ["size", "color", "productId"], {
+  unique: true,
+})
 @Entity("in_stock")
 export class InStock {
   @PrimaryGeneratedColumn({ type: "int", name: "in_stock_id", unsigned: true })
   inStockId: number;
 
-  @Column({type: "int", name: "quantity", unsigned: true, default: () => "'0'" })
+  @Column({type: "int", name: "quantity", unsigned: true})
   quantity: number;
 
-  @Column({type: "smallint", name: "size", unsigned: true, default: () => "'0'" })
+  @Column({type: "smallint", name: "size", unsigned: true})
   size: number;
 
-  @Column({type: "varchar", name: "color", length: 50, default: () => "'0'" })
+  @Column({type: "varchar", name: "color", length: 50})
   color: string;
 
-  @Column({type: "int", name: "product_id", unsigned: true, default: () => "'0'" })
+  @Column({type: "int", name: "product_id", unsigned: true})
   productId: number;
 
   @ManyToOne(() => Product, (product) => product.inStocks, {
