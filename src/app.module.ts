@@ -17,6 +17,7 @@ import { ProductService } from './services/product/product.service';
 import { ProductController } from './controllers/api/product.controller';
 import { AuthController } from './controllers/api/auth.controller';
 import { AuthMiddleware } from './middlewares/auth.middleware';
+import { PictureService } from './services/picture/picture.service';
 
 @Module({
   imports: [
@@ -44,6 +45,7 @@ import { AuthMiddleware } from './middlewares/auth.middleware';
       ProductPrice,
       ProductMaterial,
       InStock,
+      Picture,
     ])
   ],
   controllers: [
@@ -57,6 +59,7 @@ import { AuthMiddleware } from './middlewares/auth.middleware';
     AdministratorService,
     CategoryService,
     ProductService,
+    PictureService,
   ],
   exports: [
     AdministratorService,
