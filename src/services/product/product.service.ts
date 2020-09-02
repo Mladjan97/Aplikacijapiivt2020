@@ -2,12 +2,12 @@ import { Injectable } from "@nestjs/common";
 import { TypeOrmCrudService } from "@nestjsx/crud-typeorm";
 import { InjectRepository } from "@nestjs/typeorm";
 import { Repository } from "typeorm";
-import { Product } from "entities/product.entity";
+import { Product } from "src/entities/product.entity";
 import { AddProductDto } from "src/dtos/product/add.product.dto";
 import { ApiResponse } from "src/misc/api.response.class";
-import { ProductPrice } from "entities/product-price.entity";
-import { ProductMaterial } from "entities/product-material.entity";
-import { InStock } from "entities/in-stock.entity";
+import { ProductPrice } from "src/entities/product-price.entity";
+import { ProductMaterial } from "src/entities/product-material.entity";
+import { InStock } from "src/entities/in-stock.entity";
 
 @Injectable()
 export class ProductService extends TypeOrmCrudService<Product> {
