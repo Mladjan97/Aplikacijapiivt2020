@@ -1,6 +1,6 @@
 /* eslint-disable prefer-const */
 /* eslint-disable @typescript-eslint/explicit-module-boundary-types */
-import { Controller, Post, Body, Param, UseInterceptors, UploadedFile } from "@nestjs/common";
+import { Controller, Post, Body, Param, UseInterceptors, UploadedFile, Req } from "@nestjs/common";
 import { Crud } from "@nestjsx/crud";
 import { ProductService } from "src/services/product/product.service";
 import { Product } from "entities/product.entity";
@@ -91,12 +91,14 @@ export class ProductController {
             fileFilter: (req, file, callback) => {
 
                 if (!file.originalname.toLowerCase().match(/\.(jpg|png)$/)) {
-                    callback(new Error('Bad file extensions!'), false);
+                    req.fileFilterError = 'Bad file extension!';
+                    callback(null, false);
                     return;
                 }
 
                 if (!(file.mimetype.includes('jpeg') || file.mimetype.includes('png'))) {
-                    callback(new Error('Bad file content!'), false);
+                    req.fileFilterError = 'Bad file content!';
+                    callback(null, false);
                     return;
                 }
 
@@ -105,12 +107,24 @@ export class ProductController {
             },
             limits: {
                 files: 1,
-                fieldSize: StorageConfig.photoMaxFileSize,
+                fileSize: StorageConfig.photoMaxFileSize,
             }
         })
     )
     // eslint-disable-next-line @typescript-eslint/explicit-module-boundary-types
-    async uploadPhoto(@Param('id') productId: number, @UploadedFile() picture): Promise <ApiResponse | Picture> {
+    async uploadPhoto(
+        @Param('id') productId: number,
+        @UploadedFile() picture,
+        @Req() req
+    ): Promise <ApiResponse | Picture> {
+
+        if(req.fileFilterError){
+            return new ApiResponse('error', -4002, req.fileFilterError);
+        }
+
+        if(!picture) {
+            return new ApiResponse('error', -4002, 'File not uploaded');
+        }
 
         const newPicture: Picture = new Picture();
         newPicture.productId = productId;
