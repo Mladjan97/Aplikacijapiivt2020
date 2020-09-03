@@ -64,12 +64,12 @@ export class ProductController {
 
         return this.service.createFullProduct(data);
     }
-
+/*
     @Patch(':id')
     editFullProduct(@Param('id') id: number, @Body() data: EditProductDto) {
         return this.service.editFullProduct(id, data);
     }
-
+*/
     @Post(':id/uploadPicture/')
     @UseInterceptors(
         FileInterceptor('picture', {
