@@ -18,6 +18,8 @@ import { ProductController } from './controllers/api/product.controller';
 import { AuthController } from './controllers/api/auth.controller';
 import { AuthMiddleware } from './middlewares/auth.middleware';
 import { PictureService } from './services/picture/picture.service';
+import { InStockService } from './services/inStock/in-stock.service';
+import { InStockController } from './controllers/api/in-stock.controller';
 
 @Module({
   imports: [
@@ -54,12 +56,14 @@ import { PictureService } from './services/picture/picture.service';
     CategoryController,
     ProductController,
     AuthController,
+    InStockController,
   ],
   providers: [
     AdministratorService,
     CategoryService,
     ProductService,
     PictureService,
+    InStockService,
   ],
   exports: [
     AdministratorService,
