@@ -1,6 +1,6 @@
 /* eslint-disable prefer-const */
 /* eslint-disable @typescript-eslint/explicit-module-boundary-types */
-import { Controller, Post, Body, Param, UseInterceptors, UploadedFile, Req, Delete } from "@nestjs/common";
+import { Controller, Post, Body, Param, UseInterceptors, UploadedFile, Req, Delete, Patch } from "@nestjs/common";
 import { Crud } from "@nestjsx/crud";
 import { ProductService } from "src/services/product/product.service";
 import { Product } from "src/entities/product.entity";
@@ -15,6 +15,7 @@ import * as fileType from 'file-type';
 import * as fs from 'fs';
 import * as sharp from 'sharp';
 import { runInThisContext } from "vm";
+import { EditProductDto } from "src/dtos/product/edit.product.dto";
 
 @Controller('api/product')
 @Crud({
@@ -46,6 +47,9 @@ import { runInThisContext } from "vm";
                 eager: true
             }
         }
+    },
+    routes: {
+        exclude: [ 'updateOneBase', 'replaceOneBase', 'deleteOneBase' ]
     }
 })
 export class ProductController {
@@ -59,6 +63,11 @@ export class ProductController {
     createFullProduct(@Body() data: AddProductDto) {
 
         return this.service.createFullProduct(data);
+    }
+
+    @Patch(':id')
+    editFullProduct(@Param('id') id: number, @Body() data: EditProductDto) {
+        return this.service.editFullProduct(id, data);
     }
 
     @Post(':id/uploadPicture/')

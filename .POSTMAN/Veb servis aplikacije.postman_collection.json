@@ -78,6 +78,57 @@
 							],
 							"cookie": [],
 							"body": "[\n    {\n        \"administratorId\": 1,\n        \"username\": \"mladjan\",\n        \"passwordHash\": \"61616126387127317238712731\"\n    },\n    {\n        \"administratorId\": 2,\n        \"username\": \"test_user\",\n        \"passwordHash\": \"919012ahdakjd190823h131231\"\n    }\n]"
+						},
+						{
+							"name": "Get all administrators / With working token",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:3000/api/administrator/",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "3000",
+									"path": [
+										"api",
+										"administrator",
+										""
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "845"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"34d-hUBhfCMlQ/qzOrbuUM0V6UAVgyA\""
+								},
+								{
+									"key": "Date",
+									"value": "Tue, 01 Sep 2020 18:32:16 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								}
+							],
+							"cookie": [],
+							"body": "[\n    {\n        \"administratorId\": 1,\n        \"username\": \"mladjan\",\n        \"passwordHash\": \"083F1BC212F01AF4B896DFF47525F732DDE865F24A2719DF3D1A4C6B2E99A57B996288DB8363F3E4EF3C330ED9D71DB65E4D2F4CFB067532CA814F210CCA883F\"\n    },\n    {\n        \"administratorId\": 2,\n        \"username\": \"test_user\",\n        \"passwordHash\": \"919012ahdakjd190823h131231\"\n    },\n    {\n        \"administratorId\": 5,\n        \"username\": \"pperic\",\n        \"passwordHash\": \"9D1B1DB471F692E6736119A0AF99BF5E20D4DB137E75A6665DDDABE58DBACB2A35A2B5A726D4D66C15F3B17B72193EB79C513CCFD377F47164C261837EC0AF87\"\n    },\n    {\n        \"administratorId\": 6,\n        \"username\": \"mmarkovic\",\n        \"passwordHash\": \"A8511160E54CE76E8FC85C6E71F8B8072915A73F0174AE51D1D4877FB93A387D83760D60802739150483E0938D00281341FDEACAF0FE79F3D2982270AC04467B\"\n    },\n    {\n        \"administratorId\": 8,\n        \"username\": \"admin\",\n        \"passwordHash\": \"C7AD44CBAD762A5DA0A452F9E854FDC1E0E7A52A38015F23F3EAB1D80B931DD472634DFAC71CD34EBC35D16AB7FB8A90C81F975113D6C7538DC69DD8DE9077EC\"\n    }\n]"
 						}
 					]
 				},
@@ -87,7 +138,7 @@
 						"method": "GET",
 						"header": [],
 						"url": {
-							"raw": "http://localhost:3000/api/administrator/2/",
+							"raw": "http://localhost:3000/api/administrator/5/",
 							"protocol": "http",
 							"host": [
 								"localhost"
@@ -96,7 +147,7 @@
 							"path": [
 								"api",
 								"administrator",
-								"2",
+								"5",
 								""
 							]
 						}
@@ -244,7 +295,7 @@
 						],
 						"body": {
 							"mode": "raw",
-							"raw": "{\r\n    \"username\": \"mmarkovic\",\r\n    \"password\": \"nekaTajnijaLozinka\"\r\n}"
+							"raw": "{\r\n    \"username\": \"admin\",\r\n    \"password\": \"admin\"\r\n}"
 						},
 						"url": {
 							"raw": "http://localhost:3000/api/administrator/",
@@ -576,7 +627,1731 @@
 					]
 				}
 			],
+			"event": [
+				{
+					"listen": "prerequest",
+					"script": {
+						"id": "84c91500-6fa2-4b2d-835d-1325f9b73eef",
+						"type": "text/javascript",
+						"exec": [
+							""
+						]
+					}
+				},
+				{
+					"listen": "test",
+					"script": {
+						"id": "98e29a67-1005-48a3-a07a-d3d7a21f899f",
+						"type": "text/javascript",
+						"exec": [
+							""
+						]
+					}
+				}
+			],
 			"protocolProfileBehavior": {}
+		},
+		{
+			"name": "Category",
+			"item": [
+				{
+					"name": "Get all categories",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:3000/api/category/",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"category",
+								""
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Get all categories",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:3000/api/category/",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "3000",
+									"path": [
+										"api",
+										"category",
+										""
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "263"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"107-uvFdBunpzvr5EUkxVK92uGNGG5U\""
+								},
+								{
+									"key": "Date",
+									"value": "Mon, 24 Aug 2020 11:59:28 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								}
+							],
+							"cookie": [],
+							"body": "[\n    {\n        \"categoryId\": 1,\n        \"name\": \"Sneakers\",\n        \"imagePath\": \"assets/patike.jpg\"\n    },\n    {\n        \"categoryId\": 2,\n        \"name\": \"Shoes\",\n        \"imagePath\": \"assets/cipele.jpg\"\n    },\n    {\n        \"categoryId\": 3,\n        \"name\": \"Slippers\",\n        \"imagePath\": \"assets/papuce.jpg\"\n    },\n    {\n        \"categoryId\": 5,\n        \"name\": \"Clogs\",\n        \"imagePath\": \"assets/klompe.jpg\"\n    }\n]"
+						}
+					]
+				},
+				{
+					"name": "Get a single category",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:3000/api/category/2/",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"category",
+								"2",
+								""
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Get a single category",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:3000/api/category/2/",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "3000",
+									"path": [
+										"api",
+										"category",
+										"2",
+										""
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "63"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"3f-zCZfo61fDLydJ8C6j3bn+op5Kvc\""
+								},
+								{
+									"key": "Date",
+									"value": "Mon, 24 Aug 2020 12:00:23 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"categoryId\": 2,\n    \"name\": \"Shoes\",\n    \"imagePath\": \"assets/cipele.jpg\"\n}"
+						}
+					]
+				},
+				{
+					"name": "Add new Category",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\": \"Boots\",\r\n    \"imagePath\": \"assets/cizme.jpg\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3000/api/category/",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"category",
+								""
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Add new Category",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"name\": \"Boots\",\r\n    \"imagePath\": \"assets/cizme.jpg\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:3000/api/category/",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "3000",
+									"path": [
+										"api",
+										"category",
+										""
+									]
+								}
+							},
+							"status": "Created",
+							"code": 201,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "62"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"3e-HmzeWNe64u1UNtgLcVtSGP3Jgg4\""
+								},
+								{
+									"key": "Date",
+									"value": "Thu, 03 Sep 2020 09:49:05 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"categoryId\": 6,\n    \"name\": \"Boots\",\n    \"imagePath\": \"assets/cizme.jpg\"\n}"
+						}
+					]
+				},
+				{
+					"name": "Edit a single Category",
+					"request": {
+						"method": "PATCH",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"imagePath\": \"assets/boots.jpg\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3000/api/category/6/",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"category",
+								"6",
+								""
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Edit a single Category",
+							"originalRequest": {
+								"method": "PATCH",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"imagePath\": \"assets/boots.jpg\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:3000/api/category/6/",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "3000",
+									"path": [
+										"api",
+										"category",
+										"6",
+										""
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "62"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"3e-5I4qGe4wWbYS8Vm3PYTRGLkxPyY\""
+								},
+								{
+									"key": "Date",
+									"value": "Thu, 03 Sep 2020 09:50:43 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"categoryId\": 6,\n    \"name\": \"Boots\",\n    \"imagePath\": \"assets/boots.jpg\"\n}"
+						}
+					]
+				}
+			],
+			"event": [
+				{
+					"listen": "prerequest",
+					"script": {
+						"id": "c7e871ae-d7eb-4d7b-959f-2b36a3c9b5c0",
+						"type": "text/javascript",
+						"exec": [
+							""
+						]
+					}
+				},
+				{
+					"listen": "test",
+					"script": {
+						"id": "bb971c62-dd96-4ad9-a89d-aaa2871331e9",
+						"type": "text/javascript",
+						"exec": [
+							""
+						]
+					}
+				}
+			],
+			"protocolProfileBehavior": {}
+		},
+		{
+			"name": "Product",
+			"item": [
+				{
+					"name": "Get all products",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:3000/api/product/",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"product",
+								""
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Get all products",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:3000/api/product/",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "3000",
+									"path": [
+										"api",
+										"product",
+										""
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "1520"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"5f0-0phHYZdaQ4uKre0iZTqxkmX7z6E\""
+								},
+								{
+									"key": "Date",
+									"value": "Mon, 24 Aug 2020 12:04:24 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								}
+							],
+							"cookie": [],
+							"body": "[\n    {\n        \"productId\": 1,\n        \"title\": \"Airmax2\",\n        \"description\": \"Neki opis1...\",\n        \"categoryId\": 1,\n        \"productMaterialId\": 2,\n        \"category\": {\n            \"categoryId\": 1,\n            \"name\": \"Sneakers\",\n            \"imagePath\": \"assets/patike.jpg\"\n        },\n        \"pictures\": [\n            {\n                \"pictureId\": 1,\n                \"productId\": 1,\n                \"imagePath\": \"images/1/front.jpg\"\n            },\n            {\n                \"pictureId\": 2,\n                \"productId\": 1,\n                \"imagePath\": \"images/1/back.jpg\"\n            }\n        ],\n        \"productMaterial\": {\n            \"productMaterialId\": 2,\n            \"materialName\": \"Leather\"\n        },\n        \"productPrices\": [\n            {\n                \"productPriceId\": 1,\n                \"productId\": 1,\n                \"price\": \"45.00\",\n                \"createdAt\": \"2020-08-24T11:09:01.000Z\"\n            },\n            {\n                \"productPriceId\": 2,\n                \"productId\": 1,\n                \"price\": \"43.00\",\n                \"createdAt\": \"2020-08-24T11:09:11.000Z\"\n            }\n        ],\n        \"inStocks\": [\n            {\n                \"inStockId\": 1,\n                \"quantity\": 25,\n                \"size\": 43,\n                \"color\": \"Blue\",\n                \"productId\": 1\n            },\n            {\n                \"inStockId\": 3,\n                \"quantity\": 10,\n                \"size\": 44,\n                \"color\": \"Black\",\n                \"productId\": 1\n            },\n            {\n                \"inStockId\": 5,\n                \"quantity\": 5,\n                \"size\": 45,\n                \"color\": \"Black\",\n                \"productId\": 1\n            }\n        ]\n    },\n    {\n        \"productId\": 2,\n        \"title\": \"Papuce\",\n        \"description\": \"Neki opis2...\",\n        \"categoryId\": 3,\n        \"productMaterialId\": 1,\n        \"category\": {\n            \"categoryId\": 3,\n            \"name\": \"Slippers\",\n            \"imagePath\": \"assets/papuce.jpg\"\n        },\n        \"pictures\": [],\n        \"productMaterial\": {\n            \"productMaterialId\": 1,\n            \"materialName\": \"Rubber\"\n        },\n        \"productPrices\": [],\n        \"inStocks\": []\n    },\n    {\n        \"productId\": 3,\n        \"title\": \"Klompe\",\n        \"description\": \"Neki opis3...\",\n        \"categoryId\": 5,\n        \"productMaterialId\": 5,\n        \"category\": {\n            \"categoryId\": 5,\n            \"name\": \"Clogs\",\n            \"imagePath\": \"assets/klompe.jpg\"\n        },\n        \"pictures\": [],\n        \"productMaterial\": {\n            \"productMaterialId\": 5,\n            \"materialName\": \"Plastic\"\n        },\n        \"productPrices\": [],\n        \"inStocks\": [\n            {\n                \"inStockId\": 6,\n                \"quantity\": 6,\n                \"size\": 42,\n                \"color\": \"White\",\n                \"productId\": 3\n            },\n            {\n                \"inStockId\": 7,\n                \"quantity\": 4,\n                \"size\": 43,\n                \"color\": \"Blue\",\n                \"productId\": 3\n            }\n        ]\n    }\n]"
+						}
+					]
+				},
+				{
+					"name": "Get a single product",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:3000/api/product/1/",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"product",
+								"1",
+								""
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Get a single product",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:3000/api/product/2/",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "3000",
+									"path": [
+										"api",
+										"product",
+										"2",
+										""
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "290"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"122-3leLI9TOYC+Zfx1tBU+GKFaQqsU\""
+								},
+								{
+									"key": "Date",
+									"value": "Mon, 24 Aug 2020 12:04:53 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"productId\": 2,\n    \"title\": \"Papuce\",\n    \"description\": \"Neki opis2...\",\n    \"categoryId\": 3,\n    \"productMaterialId\": 1,\n    \"category\": {\n        \"categoryId\": 3,\n        \"name\": \"Slippers\",\n        \"imagePath\": \"assets/papuce.jpg\"\n    },\n    \"pictures\": [],\n    \"productMaterial\": {\n        \"productMaterialId\": 1,\n        \"materialName\": \"Rubber\"\n    },\n    \"productPrices\": [],\n    \"inStocks\": []\n}"
+						},
+						{
+							"name": "Get a single product with new photo",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:3000/api/product/1/",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "3000",
+									"path": [
+										"api",
+										"product",
+										"1",
+										""
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "875"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"36b-7s1Y15H/c36xw4FpyjDwaJaV3LU\""
+								},
+								{
+									"key": "Date",
+									"value": "Wed, 02 Sep 2020 09:21:15 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"productId\": 1,\n    \"title\": \"Airmax2\",\n    \"description\": \"Neki opis1...\",\n    \"categoryId\": 1,\n    \"productMaterialId\": 2,\n    \"category\": {\n        \"categoryId\": 1,\n        \"name\": \"Sneakers\",\n        \"imagePath\": \"assets/patike.jpg\"\n    },\n    \"pictures\": [\n        {\n            \"pictureId\": 1,\n            \"productId\": 1,\n            \"imagePath\": \"images/1/front.jpg\"\n        },\n        {\n            \"pictureId\": 2,\n            \"productId\": 1,\n            \"imagePath\": \"images/1/back.jpg\"\n        },\n        {\n            \"pictureId\": 3,\n            \"productId\": 1,\n            \"imagePath\": \"202092-1655446426-patika.jpg\"\n        }\n    ],\n    \"productMaterial\": {\n        \"productMaterialId\": 2,\n        \"materialName\": \"Leather\"\n    },\n    \"productPrices\": [\n        {\n            \"productPriceId\": 1,\n            \"productId\": 1,\n            \"price\": \"45.00\",\n            \"createdAt\": \"2020-08-24T11:09:01.000Z\"\n        },\n        {\n            \"productPriceId\": 2,\n            \"productId\": 1,\n            \"price\": \"43.00\",\n            \"createdAt\": \"2020-08-24T11:09:11.000Z\"\n        }\n    ],\n    \"inStocks\": [\n        {\n            \"inStockId\": 1,\n            \"quantity\": 25,\n            \"size\": 43,\n            \"color\": \"Blue\",\n            \"productId\": 1\n        },\n        {\n            \"inStockId\": 3,\n            \"quantity\": 10,\n            \"size\": 44,\n            \"color\": \"Black\",\n            \"productId\": 1\n        },\n        {\n            \"inStockId\": 5,\n            \"quantity\": 5,\n            \"size\": 45,\n            \"color\": \"Black\",\n            \"productId\": 1\n        }\n    ]\n}"
+						}
+					]
+				},
+				{
+					"name": "POST CreateFull Product",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"title\": \"Airmax32\",\r\n    \"description\": \"Neki opis55...\",\r\n    \"categoryId\": 1,\r\n    \"price\": 67.67,\r\n    \"materialId\": 2,\r\n    \"quantity\": 12,\r\n    \"size\": 44,\r\n    \"color\": \"Blue\"\r\n}"
+						},
+						"url": {
+							"raw": "http://localhost:3000/api/product/createFull/",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"product",
+								"createFull",
+								""
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "POST CreateFull Product",
+							"originalRequest": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/json",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"title\": \"Airmax32\",\r\n    \"description\": \"Neki opis55...\",\r\n    \"categoryId\": 1,\r\n    \"price\": 67.67,\r\n    \"materialId\": 2,\r\n    \"quantity\": 12,\r\n    \"size\": 44,\r\n    \"color\": \"Blue\"\r\n}"
+								},
+								"url": {
+									"raw": "http://localhost:3000/api/product/createFull/",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "3000",
+									"path": [
+										"api",
+										"product",
+										"createFull",
+										""
+									]
+								}
+							},
+							"status": "Created",
+							"code": 201,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "355"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"163-jri/FQiNDBo2UMpj1Q1JsCT6uI8\""
+								},
+								{
+									"key": "Date",
+									"value": "Thu, 27 Aug 2020 11:12:28 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"productId\": 4,\n    \"title\": \"Airmax32\",\n    \"description\": \"Neki opis55...\",\n    \"categoryId\": 1,\n    \"productMaterialId\": 2,\n    \"category\": {\n        \"categoryId\": 1,\n        \"name\": \"Sneakers\",\n        \"imagePath\": \"assets/patike.jpg\"\n    },\n    \"productMaterial\": {\n        \"productMaterialId\": 2,\n        \"materialName\": \"Leather\"\n    },\n    \"productPrices\": [\n        {\n            \"productPriceId\": 3,\n            \"productId\": 4,\n            \"price\": \"67.67\",\n            \"createdAt\": \"2020-08-27T11:12:28.000Z\"\n        }\n    ]\n}"
+						}
+					]
+				},
+				{
+					"name": "Upload Product Photo",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "picture",
+									"type": "file",
+									"src": "/C:/Users/Baza/Desktop/patika2.jpg"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://localhost:3000/api/product/1/uploadPicture/",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"product",
+								"1",
+								"uploadPicture",
+								""
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Upload Product Photo",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "formdata",
+									"formdata": [
+										{
+											"key": "picture",
+											"type": "file",
+											"src": "/C:/Users/Baza/Desktop/patika.jpg"
+										}
+									]
+								},
+								"url": {
+									"raw": "http://localhost:3000/api/product/1/uploadPicture/",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "3000",
+									"path": [
+										"api",
+										"product",
+										"1",
+										"uploadPicture",
+										""
+									]
+								}
+							},
+							"status": "Created",
+							"code": 201,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "74"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"4a-LW2j5UUzfmGWWALdfbHa5p2uS78\""
+								},
+								{
+									"key": "Date",
+									"value": "Wed, 02 Sep 2020 09:15:11 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"productId\": \"1\",\n    \"imagePath\": \"202092-1655446426-patika.jpg\",\n    \"pictureId\": 3\n}"
+						},
+						{
+							"name": "Upload Product Photo / Bad file content type",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "formdata",
+									"formdata": [
+										{
+											"key": "picture",
+											"type": "file",
+											"src": "/C:/Users/Baza/Desktop/Postman.exe.png"
+										}
+									]
+								},
+								"url": {
+									"raw": "http://localhost:3000/api/product/1/uploadPicture/",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "3000",
+									"path": [
+										"api",
+										"product",
+										"1",
+										"uploadPicture",
+										""
+									]
+								}
+							},
+							"status": "Created",
+							"code": 201,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "72"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"48-w7rIE4EocSNCWcDSjHhIi2/Nl18\""
+								},
+								{
+									"key": "Date",
+									"value": "Wed, 02 Sep 2020 12:56:38 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"status\": \"error\",\n    \"statusCode\": -4002,\n    \"message\": \"Bad file content type!\"\n}"
+						}
+					]
+				},
+				{
+					"name": "Edit a single Product",
+					"request": {
+						"method": "PATCH",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"title\": \"Airmax12\",\r\n    \"description\": \"Neki opis132...\",\r\n    \"categoryId\": 1,\r\n    \"price\": 60.27,\r\n    \"productMaterialId\": 2,\r\n    \"quantity\": 222,\r\n    \"size\": 44,\r\n    \"color\": \"Blue\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3000/api/product/4/",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"product",
+								"4",
+								""
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Edit a single Product",
+							"originalRequest": {
+								"method": "PATCH",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"title\": \"Airmax12\",\r\n    \"description\": \"Neki opis12222...\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:3000/api/product/4/",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "3000",
+									"path": [
+										"api",
+										"product",
+										"4",
+										""
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "454"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"1c6-alYGEIWgQLlChboMYkCS5pw54qs\""
+								},
+								{
+									"key": "Date",
+									"value": "Thu, 03 Sep 2020 09:45:33 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"productId\": 4,\n    \"title\": \"Airmax12\",\n    \"description\": \"Neki opis12222...\",\n    \"categoryId\": 1,\n    \"productMaterialId\": 2,\n    \"category\": {\n        \"categoryId\": 1,\n        \"name\": \"Sneakers\",\n        \"imagePath\": \"assets/patike.jpg\"\n    },\n    \"pictures\": [],\n    \"productMaterial\": {\n        \"productMaterialId\": 2,\n        \"materialName\": \"Leather\"\n    },\n    \"productPrices\": [\n        {\n            \"productPriceId\": 3,\n            \"productId\": 4,\n            \"price\": \"67.67\",\n            \"createdAt\": \"2020-08-27T11:12:28.000Z\"\n        }\n    ],\n    \"inStocks\": [\n        {\n            \"inStockId\": 8,\n            \"quantity\": 12,\n            \"size\": 44,\n            \"color\": \"Blue\",\n            \"productId\": 4\n        }\n    ]\n}"
+						}
+					]
+				},
+				{
+					"name": "Delete a single product photo",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:3000/api/product/1/deletePicture/4/",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"product",
+								"1",
+								"deletePicture",
+								"4",
+								""
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Delete a single product photo",
+							"originalRequest": {
+								"method": "DELETE",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:3000/api/product/1/deletePicture/4/",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "3000",
+									"path": [
+										"api",
+										"product",
+										"1",
+										"deletePicture",
+										"4",
+										""
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "61"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"3d-8ZqBdA11geEJA5i/HgV66p4N4KQ\""
+								},
+								{
+									"key": "Date",
+									"value": "Thu, 03 Sep 2020 10:21:06 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"status\": \"Ok\",\n    \"statusCode\": 0,\n    \"message\": \"One photo deleted!\"\n}"
+						}
+					]
+				}
+			],
+			"event": [
+				{
+					"listen": "prerequest",
+					"script": {
+						"id": "1f28b449-cb60-45d8-9c33-c61ae98f1d34",
+						"type": "text/javascript",
+						"exec": [
+							""
+						]
+					}
+				},
+				{
+					"listen": "test",
+					"script": {
+						"id": "e81c67f2-797e-47f5-a067-8ba37c6db90b",
+						"type": "text/javascript",
+						"exec": [
+							""
+						]
+					}
+				}
+			],
+			"protocolProfileBehavior": {}
+		},
+		{
+			"name": "Auth",
+			"item": [
+				{
+					"name": "Login-Auth",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"username\": \"admin\",\r\n    \"password\": \"admin\"\r\n}"
+						},
+						"url": {
+							"raw": "http://localhost:3000/auth/login/",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"auth",
+								"login",
+								""
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Login-Auth /  Administrator does not exist",
+							"originalRequest": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/json",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"username\": \"admin1\",\r\n    \"password\": \"admin\"\r\n}"
+								},
+								"url": {
+									"raw": "http://localhost:3000/auth/login/",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "3000",
+									"path": [
+										"auth",
+										"login",
+										""
+									]
+								}
+							},
+							"status": "Created",
+							"code": 201,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "52"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"34-jVzHjGg0W81AgoBNOOnaoLkouLY\""
+								},
+								{
+									"key": "Date",
+									"value": "Tue, 01 Sep 2020 10:57:15 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"status\": \"error\",\n    \"statusCode\": -3001,\n    \"message\": null\n}"
+						},
+						{
+							"name": "Login-Auth / When administrator exists and password is correct",
+							"originalRequest": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/json",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"username\": \"admin\",\r\n    \"password\": \"admin\"\r\n}"
+								},
+								"url": {
+									"raw": "http://localhost:3000/auth/login/",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "3000",
+									"path": [
+										"auth",
+										"login",
+										""
+									]
+								}
+							},
+							"status": "Created",
+							"code": 201,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "290"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"122-DbPXBX3zARthL9pHbhdLzQZV+ck\""
+								},
+								{
+									"key": "Date",
+									"value": "Tue, 01 Sep 2020 11:04:40 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"administratorId\": 8,\n    \"username\": \"admin\",\n    \"token\": \"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJhZG1pbmlzdHJhdG9ySWQiOjgsInVzZXJuYW1lIjoiYWRtaW4iLCJleHQiOjE2MDAxNjc4ODAuNjI5LCJpcCI6Ijo6MSIsInVhIjoiUG9zdG1hblJ1bnRpbWUvNy4yNi4zIiwiaWF0IjoxNTk4OTU4MjgwfQ.Y738SIleSPNc4Ab_RhHR6xYX_nKzh2rZziCe8e9w6d4\"\n}"
+						},
+						{
+							"name": "Login-Auth / Administrator exists, but password is not correct",
+							"originalRequest": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/json",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"username\": \"admin\",\r\n    \"password\": \"admin1\"\r\n}"
+								},
+								"url": {
+									"raw": "http://localhost:3000/auth/login/",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "3000",
+									"path": [
+										"auth",
+										"login",
+										""
+									]
+								}
+							},
+							"status": "Created",
+							"code": 201,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "52"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"34-yGnd1fUn+KRemOJUJKfIJoExxS4\""
+								},
+								{
+									"key": "Date",
+									"value": "Tue, 01 Sep 2020 10:58:09 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"status\": \"error\",\n    \"statusCode\": -3002,\n    \"message\": null\n}"
+						}
+					]
+				}
+			],
+			"auth": {
+				"type": "noauth"
+			},
+			"event": [
+				{
+					"listen": "prerequest",
+					"script": {
+						"id": "c7a5b021-1df9-4e08-a8cc-7438b8e6d839",
+						"type": "text/javascript",
+						"exec": [
+							""
+						]
+					}
+				},
+				{
+					"listen": "test",
+					"script": {
+						"id": "943cf8cc-0f77-4775-98f0-d9c514259ca1",
+						"type": "text/javascript",
+						"exec": [
+							""
+						]
+					}
+				}
+			],
+			"protocolProfileBehavior": {}
+		},
+		{
+			"name": "InStock",
+			"item": [
+				{
+					"name": "Get all stock",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:3000/api/inStock/",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"inStock",
+								""
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Get all stock",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:3000/api/inStock",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "3000",
+									"path": [
+										"api",
+										"inStock"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "1081"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"439-8zW9uZAUx8No/kdA6WVaseg8//o\""
+								},
+								{
+									"key": "Date",
+									"value": "Wed, 02 Sep 2020 18:13:37 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								}
+							],
+							"cookie": [],
+							"body": "[\n    {\n        \"inStockId\": 1,\n        \"quantity\": 25,\n        \"size\": 43,\n        \"color\": \"Blue\",\n        \"productId\": 1,\n        \"product\": {\n            \"productId\": 1,\n            \"title\": \"Airmax2\",\n            \"description\": \"Neki opis1...\",\n            \"categoryId\": 1,\n            \"productMaterialId\": 2\n        }\n    },\n    {\n        \"inStockId\": 3,\n        \"quantity\": 10,\n        \"size\": 44,\n        \"color\": \"Black\",\n        \"productId\": 1,\n        \"product\": {\n            \"productId\": 1,\n            \"title\": \"Airmax2\",\n            \"description\": \"Neki opis1...\",\n            \"categoryId\": 1,\n            \"productMaterialId\": 2\n        }\n    },\n    {\n        \"inStockId\": 5,\n        \"quantity\": 5,\n        \"size\": 45,\n        \"color\": \"Black\",\n        \"productId\": 1,\n        \"product\": {\n            \"productId\": 1,\n            \"title\": \"Airmax2\",\n            \"description\": \"Neki opis1...\",\n            \"categoryId\": 1,\n            \"productMaterialId\": 2\n        }\n    },\n    {\n        \"inStockId\": 6,\n        \"quantity\": 6,\n        \"size\": 42,\n        \"color\": \"White\",\n        \"productId\": 3,\n        \"product\": {\n            \"productId\": 3,\n            \"title\": \"Klompe\",\n            \"description\": \"Neki opis3...\",\n            \"categoryId\": 5,\n            \"productMaterialId\": 5\n        }\n    },\n    {\n        \"inStockId\": 7,\n        \"quantity\": 4,\n        \"size\": 43,\n        \"color\": \"Blue\",\n        \"productId\": 3,\n        \"product\": {\n            \"productId\": 3,\n            \"title\": \"Klompe\",\n            \"description\": \"Neki opis3...\",\n            \"categoryId\": 5,\n            \"productMaterialId\": 5\n        }\n    },\n    {\n        \"inStockId\": 8,\n        \"quantity\": 12,\n        \"size\": 44,\n        \"color\": \"Blue\",\n        \"productId\": 4,\n        \"product\": {\n            \"productId\": 4,\n            \"title\": \"Airmax32\",\n            \"description\": \"Neki opis55...\",\n            \"categoryId\": 1,\n            \"productMaterialId\": 2\n        }\n    }\n]"
+						}
+					]
+				},
+				{
+					"name": "Get a single stock",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:3000/api/inStock/1/",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"inStock",
+								"1",
+								""
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Get a single stock",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:3000/api/inStock/1/",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "3000",
+									"path": [
+										"api",
+										"inStock",
+										"1",
+										""
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "179"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"b3-m6kYXwW4KeyxE5doMxcPQXu6VAA\""
+								},
+								{
+									"key": "Date",
+									"value": "Thu, 03 Sep 2020 09:14:48 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"inStockId\": 1,\n    \"quantity\": 25,\n    \"size\": 43,\n    \"color\": \"Blue\",\n    \"productId\": 1,\n    \"product\": {\n        \"productId\": 1,\n        \"title\": \"Airmax2\",\n        \"description\": \"Neki opis1...\",\n        \"categoryId\": 1,\n        \"productMaterialId\": 2\n    }\n}"
+						},
+						{
+							"name": "Get all stock",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:3000/api/inStock",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "3000",
+									"path": [
+										"api",
+										"inStock"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "1081"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"439-8zW9uZAUx8No/kdA6WVaseg8//o\""
+								},
+								{
+									"key": "Date",
+									"value": "Wed, 02 Sep 2020 18:13:37 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								}
+							],
+							"cookie": [],
+							"body": "[\n    {\n        \"inStockId\": 1,\n        \"quantity\": 25,\n        \"size\": 43,\n        \"color\": \"Blue\",\n        \"productId\": 1,\n        \"product\": {\n            \"productId\": 1,\n            \"title\": \"Airmax2\",\n            \"description\": \"Neki opis1...\",\n            \"categoryId\": 1,\n            \"productMaterialId\": 2\n        }\n    },\n    {\n        \"inStockId\": 3,\n        \"quantity\": 10,\n        \"size\": 44,\n        \"color\": \"Black\",\n        \"productId\": 1,\n        \"product\": {\n            \"productId\": 1,\n            \"title\": \"Airmax2\",\n            \"description\": \"Neki opis1...\",\n            \"categoryId\": 1,\n            \"productMaterialId\": 2\n        }\n    },\n    {\n        \"inStockId\": 5,\n        \"quantity\": 5,\n        \"size\": 45,\n        \"color\": \"Black\",\n        \"productId\": 1,\n        \"product\": {\n            \"productId\": 1,\n            \"title\": \"Airmax2\",\n            \"description\": \"Neki opis1...\",\n            \"categoryId\": 1,\n            \"productMaterialId\": 2\n        }\n    },\n    {\n        \"inStockId\": 6,\n        \"quantity\": 6,\n        \"size\": 42,\n        \"color\": \"White\",\n        \"productId\": 3,\n        \"product\": {\n            \"productId\": 3,\n            \"title\": \"Klompe\",\n            \"description\": \"Neki opis3...\",\n            \"categoryId\": 5,\n            \"productMaterialId\": 5\n        }\n    },\n    {\n        \"inStockId\": 7,\n        \"quantity\": 4,\n        \"size\": 43,\n        \"color\": \"Blue\",\n        \"productId\": 3,\n        \"product\": {\n            \"productId\": 3,\n            \"title\": \"Klompe\",\n            \"description\": \"Neki opis3...\",\n            \"categoryId\": 5,\n            \"productMaterialId\": 5\n        }\n    },\n    {\n        \"inStockId\": 8,\n        \"quantity\": 12,\n        \"size\": 44,\n        \"color\": \"Blue\",\n        \"productId\": 4,\n        \"product\": {\n            \"productId\": 4,\n            \"title\": \"Airmax32\",\n            \"description\": \"Neki opis55...\",\n            \"categoryId\": 1,\n            \"productMaterialId\": 2\n        }\n    }\n]"
+						}
+					]
+				},
+				{
+					"name": "Add new Stock",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"quantity\": 22,\r\n    \"size\": 40,\r\n    \"color\": \"Black\",\r\n    \"productId\": 1\r\n\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3000/api/inStock/",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"inStock",
+								""
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Add new Stock / new Stock added correctly",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"quantity\": 22,\r\n    \"size\": 40,\r\n    \"color\": \"Black\",\r\n    \"productId\": 1\r\n\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:3000/api/inStock/",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "3000",
+									"path": [
+										"api",
+										"inStock",
+										""
+									]
+								}
+							},
+							"status": "Created",
+							"code": 201,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "180"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"b4-yrOzXVXbr2iLjp4RADYcfdduIX4\""
+								},
+								{
+									"key": "Date",
+									"value": "Thu, 03 Sep 2020 09:26:55 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"inStockId\": 9,\n    \"quantity\": 22,\n    \"size\": 40,\n    \"color\": \"Black\",\n    \"productId\": 1,\n    \"product\": {\n        \"productId\": 1,\n        \"title\": \"Airmax2\",\n        \"description\": \"Neki opis1...\",\n        \"categoryId\": 1,\n        \"productMaterialId\": 2\n    }\n}"
+						}
+					]
+				},
+				{
+					"name": "Edit a single Stock",
+					"request": {
+						"method": "PATCH",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"quantity\": 20\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3000/api/inStock/9/",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"inStock",
+								"9",
+								""
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Edit a single Stock / Changed quantity",
+							"originalRequest": {
+								"method": "PATCH",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"quantity\": 20\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:3000/api/inStock/9/",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "3000",
+									"path": [
+										"api",
+										"inStock",
+										"9",
+										""
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "180"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"b4-9G79oacpjf39W61H0M6RE920CMo\""
+								},
+								{
+									"key": "Date",
+									"value": "Thu, 03 Sep 2020 09:35:06 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"inStockId\": 9,\n    \"quantity\": 20,\n    \"size\": 40,\n    \"color\": \"Black\",\n    \"productId\": 1,\n    \"product\": {\n        \"productId\": 1,\n        \"title\": \"Airmax2\",\n        \"description\": \"Neki opis1...\",\n        \"categoryId\": 1,\n        \"productMaterialId\": 2\n    }\n}"
+						}
+					]
+				}
+			],
+			"event": [
+				{
+					"listen": "prerequest",
+					"script": {
+						"id": "43d1a0c3-80db-4c64-96c7-34c1d731babf",
+						"type": "text/javascript",
+						"exec": [
+							""
+						]
+					}
+				},
+				{
+					"listen": "test",
+					"script": {
+						"id": "2c4ddc19-6380-4113-ac2b-43ba2809ccbe",
+						"type": "text/javascript",
+						"exec": [
+							""
+						]
+					}
+				}
+			],
+			"protocolProfileBehavior": {}
+		}
+	],
+	"auth": {
+		"type": "bearer",
+		"bearer": [
+			{
+				"key": "token",
+				"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJhZG1pbmlzdHJhdG9ySWQiOjgsInVzZXJuYW1lIjoiYWRtaW4iLCJleHAiOjE2MDAyNjgxNzQuNzAzLCJpcCI6Ijo6MSIsInVhIjoiUG9zdG1hblJ1bnRpbWUvNy4yNi4zIiwiaWF0IjoxNTk5MDU4NTc0fQ.5CdptoGvYfvdbSC1zFrGBDC8c9HKrTzrbXw8p4TaaoQ",
+				"type": "string"
+			}
+		]
+	},
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"id": "ba8b8ed4-6bbc-4c1f-ae95-bc0d92759334",
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"id": "2356063a-52b8-4236-8a28-d6a8fafb3ae4",
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
 		}
 	],
 	"protocolProfileBehavior": {}

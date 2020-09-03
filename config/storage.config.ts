@@ -1,7 +1,7 @@
 export const StorageConfig = {
 
     photo: {
-        destination: '../storage/photos/',
+        destination: 'src/storage/photos/',
         maxSize: 3 * 1024 * 1024,
         resize: {
             thumb: {
