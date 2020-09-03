@@ -1,6 +1,6 @@
 /* eslint-disable prefer-const */
 /* eslint-disable @typescript-eslint/explicit-module-boundary-types */
-import { Controller, Post, Body, Param, UseInterceptors, UploadedFile, Req } from "@nestjs/common";
+import { Controller, Post, Body, Param, UseInterceptors, UploadedFile, Req, Delete } from "@nestjs/common";
 import { Crud } from "@nestjsx/crud";
 import { ProductService } from "src/services/product/product.service";
 import { Product } from "src/entities/product.entity";
@@ -14,6 +14,7 @@ import { ApiResponse } from "src/misc/api.response.class";
 import * as fileType from 'file-type';
 import * as fs from 'fs';
 import * as sharp from 'sharp';
+import { runInThisContext } from "vm";
 
 @Controller('api/product')
 @Crud({
@@ -174,4 +175,40 @@ export class ProductController {
             })
             .toFile(destinationFilePath); 
     }
+
+    @Delete(':productId/deletePicture/:pictureId') 
+        public async deletePicture(
+            @Param('productId') productId: number,
+            @Param('pictureId') pictureId: number,
+        ) {
+            const picture = await this.pictureService.findOne({
+                productId: productId,
+                pictureId: pictureId
+            });
+
+        if (!picture) {
+                return new ApiResponse('error', -4004, 'Photo not found!');
+        }
+
+        try{
+            fs.unlinkSync(StorageConfig.photo.destination + picture.imagePath);
+            fs.unlinkSync(StorageConfig.photo.destination +
+                StorageConfig.photo.resize.thumb.directory +
+                picture.imagePath);
+
+            fs.unlinkSync(StorageConfig.photo.destination +
+                    StorageConfig.photo.resize.small.directory +
+                    picture.imagePath);
+
+        } catch (e) { }
+                    
+            const deleteResult = await this.pictureService.deleteById(pictureId);
+            
+            if (deleteResult.affected == 0) {
+                return new ApiResponse('error', -4004, 'Photo not found!');
+            }
+
+            return new ApiResponse('Ok', 0, 'One photo deleted!');
+        }
+    
 }
