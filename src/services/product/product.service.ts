@@ -57,11 +57,15 @@ export class ProductService extends TypeOrmCrudService<Product> {
           ]
       });
     }
-/*
+
     async editFullProduct(productId: number, data: EditProductDto): Promise <Product | ApiResponse>{
       const existingProduct: Product = await this.product.findOne(productId, {
         relations: [ 'productPrices', 'inStocks' ]
       });
+
+      const someId = await this.inStock.findOne(6);
+
+      console.log(someId);
 
       if (!existingProduct) {
         return new ApiResponse('error', -5001, 'Product not found.');
@@ -91,7 +95,7 @@ export class ProductService extends TypeOrmCrudService<Product> {
           return new ApiResponse('error', -5003, 'Could not save the new product price.');
         }
       }
-
+/*
       const newQuantity = Number(data.quantity);
       const lastQ = existingProduct.inStocks[existingProduct.inStocks.length-1].quantity;
       const lastQuantity = Number(lastQ);
@@ -138,20 +142,30 @@ export class ProductService extends TypeOrmCrudService<Product> {
           return new ApiResponse('error', -5003, 'Could not save the new product color.');
         }
       }
-/*
-      if (newSize == lastSize && newColorString == lastColorString) {
+      */
+
+     const newSize = Number(data.size);
+     const lastS = existingProduct.inStocks[existingProduct.inStocks.length-1].size;
+     const lastSize = Number(lastS);
+
+     const newColorString = String(data.color);
+      const lastC = existingProduct.inStocks[existingProduct.inStocks.length-1].color;
+      const lastColorString = String(lastC);
+
+      if (newSize === lastSize && newColorString === lastColorString) {
         await this.inStock.remove(existingProduct.inStocks);
         const newProductQuantity = new InStock();
         newProductQuantity.productId = productId;
         newProductQuantity.quantity  = data.quantity;
+        newProductQuantity.size      = data.size;
+        newProductQuantity.color      = data.color;
 
         const savedProductQuantity = await this.inStock.save(newProductQuantity);
         if (!savedProductQuantity) {
           return new ApiResponse('error', -5003, 'Could not save the new product quantity.');
         }
       }
-*/
-/*
+
       return await this.product.findOne(productId, {
           relations: [
             "category",
@@ -159,7 +173,5 @@ export class ProductService extends TypeOrmCrudService<Product> {
             "productPrices"
           ]
       });
-      
     }
-  */  
 }
