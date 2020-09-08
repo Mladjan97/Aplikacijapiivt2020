@@ -63,10 +63,6 @@ export class ProductService extends TypeOrmCrudService<Product> {
         relations: [ 'productPrices', 'inStocks' ]
       });
 
-      const someId = await this.inStock.findOne(6);
-
-      console.log(someId);
-
       if (!existingProduct) {
         return new ApiResponse('error', -5001, 'Product not found.');
       }

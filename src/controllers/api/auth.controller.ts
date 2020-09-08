@@ -14,7 +14,7 @@ import { jwtSecret } from "config/jwt.secret";
 export class AuthController {
     constructor(public administratorService: AdministratorService) { }
 
-        @Post('login')
+        @Post('administrator/login')
         async doLogin(@Body() data: LoginAdministratorDto, @Req() req: Request): Promise<LoginInfoAdministratorDto | ApiResponse> {
             const administrator = await this.administratorService.getByUsername(data.username);
 
@@ -32,6 +32,7 @@ export class AuthController {
         }
 
         const jwtData = new JwtDataAdministratorDto();
+        jwtData.role = "administrator";
         jwtData.administratorId = administrator.administratorId;
         jwtData.username        = administrator.username;
 
