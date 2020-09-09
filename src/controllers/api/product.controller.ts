@@ -51,8 +51,23 @@ import { AllowToRoles } from "src/misc/allow.to.roles.descriptor";
         }
     },
     routes: {
-        exclude: [ 'updateOneBase', 'replaceOneBase', 'deleteOneBase' ]
-    }
+        only: [
+            "getOneBase",
+            "getManyBase",
+        ],
+        getOneBase: {
+            decorators: [
+                UseGuards(RoleCheckerGuard),
+                AllowToRoles("administrator"),
+            ],
+        },
+        getManyBase: {
+            decorators: [
+                UseGuards(RoleCheckerGuard),
+                AllowToRoles("administrator"),
+            ],
+        },
+    },
 })
 export class ProductController {
     constructor(
@@ -62,7 +77,7 @@ export class ProductController {
         ) { }
 
     
-    @Post('createFull') 
+    @Post() 
     @UseGuards(RoleCheckerGuard)
     @AllowToRoles('administrator')
     createFullProduct(@Body() data: AddProductDto) {
