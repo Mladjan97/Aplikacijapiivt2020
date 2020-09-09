@@ -1,6 +1,6 @@
 export class JwtDataAdministratorDto {
     role: "administrator";
-    id: number;
+    administratorId: number;
     username: string;
     exp: number;
     ip: string;
@@ -10,7 +10,7 @@ export class JwtDataAdministratorDto {
     toPlainObject() {
         return {
             role: this.role,
-            id: this.id,
+            administratorId: this.administratorId,
             username: this.username,
             exp: this.exp,
             ip: this.ip,

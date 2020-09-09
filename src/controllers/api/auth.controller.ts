@@ -6,7 +6,7 @@ import { ApiResponse } from "src/misc/api.response.class";
 import * as crypto from 'crypto'
 import { LoginInfoAdministratorDto } from "src/dtos/administrator/login.info.administrator.dto";
 import * as jwt from 'jsonwebtoken';
-import { JwtDataAdministratorDto } from "src/dtos/auth/jwt.data.administrator.dto";
+import { JwtDataAdministratorDto } from "src/dtos/administrator/jwt.data.administrator.dto";
 import { Request } from "express";
 import { jwtSecret } from "config/jwt.secret";
 
@@ -33,7 +33,7 @@ export class AuthController {
 
         const jwtData = new JwtDataAdministratorDto();
         jwtData.role = "administrator";
-        jwtData.id = administrator.administratorId;
+        jwtData.administratorId = administrator.administratorId;
         jwtData.username        = administrator.username;
 
         const sada = new Date();

@@ -1,10 +1,10 @@
 export class LoginInfoAdministratorDto {
-    id: number;
+    administratorId: number;
     username: string;
     token: string;
 
     constructor(id: number, un: string, jwt: string ){
-        this.id = id;
+        this.administratorId = id;
         this.username = un;
         this.token  = jwt;
     }

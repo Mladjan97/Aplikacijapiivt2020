@@ -2,7 +2,7 @@ import { NestMiddleware, HttpStatus, HttpException, Injectable } from "@nestjs/c
 import { NextFunction, Request, Response } from "express";
 import { AdministratorService } from "src/services/administrator/administrator.service";
 import * as jwt from 'jsonwebtoken';
-import { JwtDataAdministratorDto } from "src/dtos/auth/jwt.data.administrator.dto";
+import { JwtDataAdministratorDto } from "src/dtos/administrator/jwt.data.administrator.dto";
 import { jwtSecret } from "config/jwt.secret";
 
 @Injectable()
@@ -46,7 +46,7 @@ export class AuthMiddleware implements NestMiddleware {
        }
 
        if (jwtData.role === "administrator") {
-        const administrator = await this.administratorService.getById(jwtData.id);
+        const administrator = await this.administratorService.getById(jwtData.administratorId);
         if (!administrator) {
          throw new HttpException('Account not found', HttpStatus.UNAUTHORIZED);
         }

@@ -1,4 +1,4 @@
-import { JwtDataAdministratorDto } from "src/dtos/auth/jwt.data.administrator.dto"
+import { JwtDataAdministratorDto } from "src/dtos/administrator/jwt.data.administrator.dto"
 
 declare module 'express' {
     interface Request {
