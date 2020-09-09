@@ -14,7 +14,7 @@ export class RoleCheckerGuard implements CanActivate {
         const allowedToRoles = 
         this
         .reflector
-        .get<("administrator")[]>('allow_to roles', context.getHandler());
+        .get<("administrator")[]>('allow_to_roles', context.getHandler());
     
         if (!allowedToRoles.includes(role)) {
             return false;
