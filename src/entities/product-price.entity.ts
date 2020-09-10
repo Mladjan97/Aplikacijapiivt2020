@@ -7,6 +7,7 @@ import {
   PrimaryGeneratedColumn,
 } from "typeorm";
 import { Product } from "./product.entity";
+import * as Validator from 'class-validator';
 
 @Index("fk_product_price_product_id", ["productId"], {})
 @Entity("product_price")
@@ -27,6 +28,14 @@ export class ProductPrice {
     precision: 10,
     scale: 2
   })
+  @Validator.IsNotEmpty()
+  @Validator.IsPositive()
+  @Validator.IsNumber({
+    allowInfinity: false,
+    allowNaN: false,
+    maxDecimalPlaces: 2,
+  })
+
   price: number;
 
   @Column({

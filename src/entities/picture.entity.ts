@@ -7,6 +7,7 @@ import {
   PrimaryGeneratedColumn,
 } from "typeorm";
 import { Product } from "./product.entity";
+import * as Validator from 'class-validator';
 
 @Index("fk_picture_product_id", ["productId"], {})
 @Index("uq_picture_image_path", ["imagePath"], { unique: true })
@@ -19,6 +20,9 @@ export class Picture {
   productId: number;
 
   @Column({type: "varchar", name: "image_path", unique: true, length: 255 })
+  @Validator.IsNotEmpty()
+  @Validator.IsString()
+  @Validator.Length(1, 255)
   imagePath: string;
 
   @ManyToOne(() => Product, (product) => product.pictures, {

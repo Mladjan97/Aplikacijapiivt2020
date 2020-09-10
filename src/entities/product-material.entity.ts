@@ -6,6 +6,7 @@ import {
   PrimaryGeneratedColumn,
 } from "typeorm";
 import { Product } from "./product.entity";
+import * as Validator from 'class-validator';
 
 @Index("uq_product_material_material_name", ["materialName"], { unique: true })
 @Entity("product_material")
@@ -23,6 +24,8 @@ export class ProductMaterial {
     unique: true,
     length: 32
   })
+  @Validator.IsNotEmpty()
+  @Validator.IsString()
   materialName: string;
 
   @OneToMany(() => Product, (product) => product.productMaterial)

@@ -6,6 +6,7 @@ import {
   PrimaryGeneratedColumn,
 } from "typeorm";
 import { Product } from "./product.entity";
+import * as Validator from 'class-validator';
 
 @Index("uq_category_image_path", ["imagePath"], { unique: true })
 @Index("uq_category_name", ["name"], { unique: true })
@@ -19,6 +20,9 @@ export class Category {
     unique: true,
     length: 32
   })
+  @Validator.IsNotEmpty()
+  @Validator.IsString()
+  @Validator.Length(5, 32)
   name: string;
 
   @Column({
@@ -27,6 +31,9 @@ export class Category {
     unique: true,
     length: 128
   })
+  @Validator.IsNotEmpty()
+  @Validator.IsString()
+  @Validator.Length(1, 128)
   imagePath: string;
 
   @OneToMany(() => Product, (product) => product.category)
