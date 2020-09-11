@@ -18,6 +18,7 @@ import { runInThisContext } from "vm";
 import { EditProductDto } from "src/dtos/product/edit.product.dto";
 import { RoleCheckerGuard } from "src/misc/role.checker.guard";
 import { AllowToRoles } from "src/misc/allow.to.roles.descriptor";
+import { ProductSearchDto } from "src/dtos/product/product.search.dto";
 
 @Controller('api/product')
 @Crud({
@@ -247,5 +248,12 @@ export class ProductController {
 
             return new ApiResponse('Ok', 0, 'One photo deleted!');
         }
-    
+
+    @Post('search')
+    @UseGuards(RoleCheckerGuard)
+    @AllowToRoles('administrator')
+    async search(@Body() data: ProductSearchDto): Promise <Product[]> {
+        return await this.service.search(data);
+    }
+
 }

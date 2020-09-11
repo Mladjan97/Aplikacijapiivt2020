@@ -44,6 +44,6 @@ export class AddProductDto {
 
     @Validator.IsNotEmpty()
     @Validator.IsString()
-    @Validator.Length(50)
+    @Validator.Length(3,50)
     color: string;
 }

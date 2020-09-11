@@ -1,7 +1,7 @@
 import { Injectable } from "@nestjs/common";
 import { TypeOrmCrudService } from "@nestjsx/crud-typeorm";
 import { InjectRepository } from "@nestjs/typeorm";
-import { Repository } from "typeorm";
+import { Repository, In } from "typeorm";
 import { Product } from "src/entities/product.entity";
 import { AddProductDto } from "src/dtos/product/add.product.dto";
 import { ApiResponse } from "src/misc/api.response.class";
@@ -9,6 +9,7 @@ import { ProductPrice } from "src/entities/product-price.entity";
 import { ProductMaterial } from "src/entities/product-material.entity";
 import { InStock } from "src/entities/in-stock.entity";
 import { EditProductDto } from "src/dtos/product/edit.product.dto";
+import { ProductSearchDto } from "src/dtos/product/product.search.dto";
 
 @Injectable()
 export class ProductService extends TypeOrmCrudService<Product> {
@@ -53,7 +54,9 @@ export class ProductService extends TypeOrmCrudService<Product> {
           relations: [
             "category",
             "productMaterial",
-            "productPrices"
+            "productPrices",
+            "inStocks",
+            "pictures"
           ]
       });
     }
@@ -91,54 +94,6 @@ export class ProductService extends TypeOrmCrudService<Product> {
           return new ApiResponse('error', -5003, 'Could not save the new product price.');
         }
       }
-/*
-      const newQuantity = Number(data.quantity);
-      const lastQ = existingProduct.inStocks[existingProduct.inStocks.length-1].quantity;
-      const lastQuantity = Number(lastQ);
-
-      if (newQuantity !== lastQuantity) {
-        const newProductQuantity = new InStock();
-        newProductQuantity.productId = productId;
-        newProductQuantity.quantity  = data.quantity;
-
-        const savedProductQuantity = await this.inStock.save(newProductQuantity);
-        if (!savedProductQuantity) {
-          return new ApiResponse('error', -5003, 'Could not save the new product quantity.');
-        }
-      }
-
-      const newSize = Number(data.size);
-      const lastS = existingProduct.inStocks[existingProduct.inStocks.length-1].size;
-      const lastSize = Number(lastS);
-
-      if (newSize !== lastSize) {
-        const newProductSize = new InStock();
-        newProductSize.productId = productId;
-        newProductSize.size  = data.size;
-
-        const savedProductSize = await this.inStock.save(newProductSize);
-        if (!savedProductSize) {
-          return new ApiResponse('error', -5003, 'Could not save the new product size.');
-        }
-      }
-
-      const newColorString = String(data.color);
-      const lastC = existingProduct.inStocks[existingProduct.inStocks.length-1].color;
-      const lastColorString = String(lastC);
-
-
-
-      if (newColorString !== lastColorString) {
-        const newProductColor = new InStock();
-        newProductColor.productId = productId;
-        newProductColor.color     = data.color;
-
-        const savedProductColor = await this.inStock.save(newProductColor);
-        if (!savedProductColor) {
-          return new ApiResponse('error', -5003, 'Could not save the new product color.');
-        }
-      }
-      */
 
      const newSize = Number(data.size);
      const lastS = existingProduct.inStocks[existingProduct.inStocks.length-1].size;
@@ -166,8 +121,97 @@ export class ProductService extends TypeOrmCrudService<Product> {
           relations: [
             "category",
             "productMaterial",
-            "productPrices"
+            "productPrices",
+            "inStocks",
+            "pictures"
           ]
       });
     }
+    
+    async search(data: ProductSearchDto): Promise<Product[]> {
+      const builder = await this.product.createQueryBuilder("product");
+
+      builder.innerJoinAndSelect("product.productPrices",
+       "pp",
+      "pp.createdAt = (SELECT MAX(pp.created_at) FROM product_price as pp WHERE pp.product_id = product.product_id)"
+      );
+
+      builder.leftJoinAndSelect("product.inStocks", "is");
+
+      builder.where('product.productMaterialId = :productMaterialId', { productMaterialId: data.materialId });
+      
+      
+
+     builder.where('product.categoryId = :categoryId', { categoryId: data.categoryId });
+
+      if(data.size && typeof data.size === 'number') {
+        builder.andWhere('is.size = :size', { size: data.size});
+      }
+      if(data.color && typeof data.color === 'string') {
+        builder.andWhere('is.color = :color', { color: data.color});
+      }
+
+      if (data.keywords && data.keywords.length > 0) {
+        builder.andWhere(`(product.title LIKE :kw OR 
+                          product.description LIKE :kw)`,
+                          { kw: '%' + data.keywords.trim() + '%' });
+      }
+
+      if(data.priceMin && typeof data.priceMin === 'number') {
+        builder.andWhere('pp.price >= :min', { min: data.priceMin });
+      }
+
+      if(data.priceMax && typeof data.priceMax === 'number') {
+        builder.andWhere('pp.price <= :max', { max: data.priceMax });
+      }
+
+      let orderBy = 'product.title';
+      let orderDirection: 'ASC' | 'DESC' = 'ASC';
+
+      if (data.orderBy) {
+        orderBy = data.orderBy;
+
+        if(orderBy === 'price') {
+          orderBy = 'pp.price';
+        }
+
+        if(orderBy === 'title') {
+          orderBy = 'product.title';
+        }
+      }
+
+      if (data.orderDirection) {
+        orderDirection = data.orderDirection;
+      }
+
+      builder.orderBy(orderBy, orderDirection);
+
+      let page = 0;
+      let perPage: 5 | 10 | 25 | 50 = 25;
+
+      if (data.page && typeof data.page === 'number') {
+        page = data.page;
+      }
+
+      if (data.itemsPerPage && typeof data.itemsPerPage === 'number') {
+        perPage = data.itemsPerPage;
+      }
+
+      builder.skip(page * perPage);
+      builder.take(perPage);
+
+      let productIds = await (await builder.getMany()).map(product => product.productId);
+
+      return await this.product.find({
+        where: { productId: In(productIds) },
+        relations: [
+          "category",
+          "productMaterial",
+          "productPrices",
+          "inStocks",
+          "pictures"
+        ]
+      });
+    }
+    
 }
