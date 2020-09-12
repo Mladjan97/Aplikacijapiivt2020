@@ -200,7 +200,7 @@ export class ProductService extends TypeOrmCrudService<Product> {
       builder.skip(page * perPage);
       builder.take(perPage);
 
-      let productIds = await (await builder.getMany()).map(product => product.productId);
+      const productIds = await (await builder.getMany()).map(product => product.productId);
 
       return await this.product.find({
         where: { productId: In(productIds) },
