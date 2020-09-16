@@ -41,7 +41,7 @@ export class InStock {
   @Column({type: "varchar", name: "color", length: 50})
   @Validator.IsNotEmpty()
   @Validator.IsString()
-  @Validator.Length(50)
+  @Validator.Length(3, 50)
   color: string;
 
   @Column({type: "int", name: "product_id", unsigned: true})
