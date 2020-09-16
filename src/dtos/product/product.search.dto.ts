@@ -3,7 +3,7 @@ import * as Validator from 'class-validator';
 export class ProductSearchDto {
     @Validator.IsOptional()
     @Validator.IsString()
-    @Validator.Length(2,32)
+    @Validator.Length(0,32)
     keywords: string;
 
     @Validator.IsNotEmpty()

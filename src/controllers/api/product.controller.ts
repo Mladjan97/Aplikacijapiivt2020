@@ -252,7 +252,7 @@ export class ProductController {
     @Post('search')
     @UseGuards(RoleCheckerGuard)
     @AllowToRoles('administrator')
-    async search(@Body() data: ProductSearchDto): Promise <Product[]> {
+    async search(@Body() data: ProductSearchDto): Promise <Product[] | ApiResponse> {
         return await this.service.search(data);
     }
 

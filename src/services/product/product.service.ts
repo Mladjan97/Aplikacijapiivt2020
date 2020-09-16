@@ -128,7 +128,7 @@ export class ProductService extends TypeOrmCrudService<Product> {
       });
     }
     
-    async search(data: ProductSearchDto): Promise<Product[]> {
+    async search(data: ProductSearchDto): Promise<Product[] | ApiResponse> {
       const builder = await this.product.createQueryBuilder("product");
 
       builder.innerJoinAndSelect("product.productPrices",
@@ -202,6 +202,10 @@ export class ProductService extends TypeOrmCrudService<Product> {
 
       const productIds = await (await builder.getMany()).map(product => product.productId);
 
+      if(productIds.length === 0) {
+        return new ApiResponse("ok", 0, "No products found!");
+      }
+      
       return await this.product.find({
         where: { productId: In(productIds) },
         relations: [
