@@ -71,7 +71,7 @@ export class AuthController {
         return new Promise(resolve => resolve(responseObject));
       }
 
-      @Post('admin/refresh') // http://localhost:3000/auth/admin/refresh
+      @Post('administrator/refresh') // http://localhost:3000/auth/administrator/refresh
     async adminTokenRefresh(@Req() req: Request, @Body() data: AdminRefreshTokenDto): Promise<LoginInfoAdministratorDto | ApiResponse> {
         const adminToken = await this.administratorService.getAdminToken(data.token)
 
