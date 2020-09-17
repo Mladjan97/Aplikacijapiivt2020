@@ -137,6 +137,7 @@ export class ProductService extends TypeOrmCrudService<Product> {
       );
 
       builder.leftJoinAndSelect("product.inStocks", "is");
+      builder.leftJoinAndSelect("product.pictures", "pictures");
 
       builder.where('product.productMaterialId = :productMaterialId', { productMaterialId: data.materialId });
       
@@ -200,22 +201,24 @@ export class ProductService extends TypeOrmCrudService<Product> {
       builder.skip(page * perPage);
       builder.take(perPage);
 
-      const productIds = await (await builder.getMany()).map(product => product.productId);
+      const products = await builder.getMany();
 
-      if(productIds.length === 0) {
+      if(products.length === 0) {
         return new ApiResponse("ok", 0, "No products found!");
       }
       
-      return await this.product.find({
-        where: { productId: In(productIds) },
-        relations: [
-          "category",
-          "productMaterial",
-          "productPrices",
-          "inStocks",
-          "pictures"
-        ]
-      });
+      return products;
+      
     }
     
 }
+// return await this.product.find({
+//   where: { productId: In(productIds) },
+//   relations: [
+//     "category",
+//     "productMaterial",
+//     "productPrices",
+//     "inStocks",
+//     "pictures"
+//   ]
+// });
