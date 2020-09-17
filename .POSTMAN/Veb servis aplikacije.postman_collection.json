@@ -61,15 +61,15 @@
 								},
 								{
 									"key": "Content-Length",
-									"value": "177"
+									"value": "1138"
 								},
 								{
 									"key": "ETag",
-									"value": "W/\"b1-tweIeGrKrXaWJnft50jSHt75zpI\""
+									"value": "W/\"472-rHxf499cxaWxd5Pd8x+Pu1J90lo\""
 								},
 								{
 									"key": "Date",
-									"value": "Fri, 21 Aug 2020 10:05:21 GMT"
+									"value": "Wed, 09 Sep 2020 13:03:17 GMT"
 								},
 								{
 									"key": "Connection",
@@ -77,58 +77,7 @@
 								}
 							],
 							"cookie": [],
-							"body": "[\n    {\n        \"administratorId\": 1,\n        \"username\": \"mladjan\",\n        \"passwordHash\": \"61616126387127317238712731\"\n    },\n    {\n        \"administratorId\": 2,\n        \"username\": \"test_user\",\n        \"passwordHash\": \"919012ahdakjd190823h131231\"\n    }\n]"
-						},
-						{
-							"name": "Get all administrators / With working token",
-							"originalRequest": {
-								"method": "GET",
-								"header": [],
-								"url": {
-									"raw": "http://localhost:3000/api/administrator/",
-									"protocol": "http",
-									"host": [
-										"localhost"
-									],
-									"port": "3000",
-									"path": [
-										"api",
-										"administrator",
-										""
-									]
-								}
-							},
-							"status": "OK",
-							"code": 200,
-							"_postman_previewlanguage": "json",
-							"header": [
-								{
-									"key": "X-Powered-By",
-									"value": "Express"
-								},
-								{
-									"key": "Content-Type",
-									"value": "application/json; charset=utf-8"
-								},
-								{
-									"key": "Content-Length",
-									"value": "845"
-								},
-								{
-									"key": "ETag",
-									"value": "W/\"34d-hUBhfCMlQ/qzOrbuUM0V6UAVgyA\""
-								},
-								{
-									"key": "Date",
-									"value": "Tue, 01 Sep 2020 18:32:16 GMT"
-								},
-								{
-									"key": "Connection",
-									"value": "keep-alive"
-								}
-							],
-							"cookie": [],
-							"body": "[\n    {\n        \"administratorId\": 1,\n        \"username\": \"mladjan\",\n        \"passwordHash\": \"083F1BC212F01AF4B896DFF47525F732DDE865F24A2719DF3D1A4C6B2E99A57B996288DB8363F3E4EF3C330ED9D71DB65E4D2F4CFB067532CA814F210CCA883F\"\n    },\n    {\n        \"administratorId\": 2,\n        \"username\": \"test_user\",\n        \"passwordHash\": \"919012ahdakjd190823h131231\"\n    },\n    {\n        \"administratorId\": 5,\n        \"username\": \"pperic\",\n        \"passwordHash\": \"9D1B1DB471F692E6736119A0AF99BF5E20D4DB137E75A6665DDDABE58DBACB2A35A2B5A726D4D66C15F3B17B72193EB79C513CCFD377F47164C261837EC0AF87\"\n    },\n    {\n        \"administratorId\": 6,\n        \"username\": \"mmarkovic\",\n        \"passwordHash\": \"A8511160E54CE76E8FC85C6E71F8B8072915A73F0174AE51D1D4877FB93A387D83760D60802739150483E0938D00281341FDEACAF0FE79F3D2982270AC04467B\"\n    },\n    {\n        \"administratorId\": 8,\n        \"username\": \"admin\",\n        \"passwordHash\": \"C7AD44CBAD762A5DA0A452F9E854FDC1E0E7A52A38015F23F3EAB1D80B931DD472634DFAC71CD34EBC35D16AB7FB8A90C81F975113D6C7538DC69DD8DE9077EC\"\n    }\n]"
+							"body": "[\n    {\n        \"administratorId\": 1,\n        \"username\": \"mladjan\",\n        \"passwordHash\": \"083F1BC212F01AF4B896DFF47525F732DDE865F24A2719DF3D1A4C6B2E99A57B996288DB8363F3E4EF3C330ED9D71DB65E4D2F4CFB067532CA814F210CCA883F\"\n    },\n    {\n        \"administratorId\": 2,\n        \"username\": \"test_user\",\n        \"passwordHash\": \"34CEF2F906994B3E6D5FA42B566519E6C461CF16BEDAC2C3776D358A35024D6F83C35B57FE5BCCADFD71F428034FD300386EF215811F15185E252754822CFA2A\"\n    },\n    {\n        \"administratorId\": 5,\n        \"username\": \"pperic\",\n        \"passwordHash\": \"9D1B1DB471F692E6736119A0AF99BF5E20D4DB137E75A6665DDDABE58DBACB2A35A2B5A726D4D66C15F3B17B72193EB79C513CCFD377F47164C261837EC0AF87\"\n    },\n    {\n        \"administratorId\": 6,\n        \"username\": \"mmarkovic\",\n        \"passwordHash\": \"A8511160E54CE76E8FC85C6E71F8B8072915A73F0174AE51D1D4877FB93A387D83760D60802739150483E0938D00281341FDEACAF0FE79F3D2982270AC04467B\"\n    },\n    {\n        \"administratorId\": 8,\n        \"username\": \"admin\",\n        \"passwordHash\": \"C7AD44CBAD762A5DA0A452F9E854FDC1E0E7A52A38015F23F3EAB1D80B931DD472634DFAC71CD34EBC35D16AB7FB8A90C81F975113D6C7538DC69DD8DE9077EC\"\n    },\n    {\n        \"administratorId\": 9,\n        \"username\": \"ppetrovic\",\n        \"passwordHash\": \"4604554F615AD7089B1690CEFE0205CDB7766EFB4AC3C0F635EC40725D605F43DE200ED32A622F65D81EEFC29D0F4058E71556F4A36CB79C1C74EABEE7BFF680\"\n    }\n]"
 						}
 					]
 				},
@@ -159,7 +108,7 @@
 								"method": "GET",
 								"header": [],
 								"url": {
-									"raw": "http://localhost:3000/api/administrator/2/",
+									"raw": "http://localhost:3000/api/administrator/5/",
 									"protocol": "http",
 									"host": [
 										"localhost"
@@ -168,7 +117,7 @@
 									"path": [
 										"api",
 										"administrator",
-										"2",
+										"5",
 										""
 									]
 								}
@@ -187,15 +136,15 @@
 								},
 								{
 									"key": "Content-Length",
-									"value": "88"
+									"value": "187"
 								},
 								{
 									"key": "ETag",
-									"value": "W/\"58-XbNr3OMq9HA82lLYjlYWx1w/5hQ\""
+									"value": "W/\"bb-d35Z+XAQ7DZU5SttialWn1tKMw4\""
 								},
 								{
 									"key": "Date",
-									"value": "Fri, 21 Aug 2020 10:08:36 GMT"
+									"value": "Wed, 09 Sep 2020 13:03:03 GMT"
 								},
 								{
 									"key": "Connection",
@@ -203,7 +152,7 @@
 								}
 							],
 							"cookie": [],
-							"body": "{\n    \"administratorId\": 2,\n    \"username\": \"test_user\",\n    \"passwordHash\": \"919012ahdakjd190823h131231\"\n}"
+							"body": "{\n    \"administratorId\": 5,\n    \"username\": \"pperic\",\n    \"passwordHash\": \"9D1B1DB471F692E6736119A0AF99BF5E20D4DB137E75A6665DDDABE58DBACB2A35A2B5A726D4D66C15F3B17B72193EB79C513CCFD377F47164C261837EC0AF87\"\n}"
 						}
 					]
 				},
@@ -270,7 +219,7 @@
 								},
 								{
 									"key": "Date",
-									"value": "Fri, 21 Aug 2020 11:29:46 GMT"
+									"value": "Wed, 09 Sep 2020 13:03:41 GMT"
 								},
 								{
 									"key": "Connection",
@@ -285,7 +234,7 @@
 				{
 					"name": "Add a new administrator",
 					"request": {
-						"method": "PUT",
+						"method": "POST",
 						"header": [
 							{
 								"key": "Content-Type",
@@ -295,7 +244,7 @@
 						],
 						"body": {
 							"mode": "raw",
-							"raw": "{\r\n    \"username\": \"admin\",\r\n    \"password\": \"admin\"\r\n}"
+							"raw": "{\r\n    \"username\": \"admin123\",\r\n    \"password\": \"admin123\"\r\n}"
 						},
 						"url": {
 							"raw": "http://localhost:3000/api/administrator/",
@@ -313,9 +262,9 @@
 					},
 					"response": [
 						{
-							"name": "Add a new administrator -  success",
+							"name": "Add a new administrator - error - username taken",
 							"originalRequest": {
-								"method": "PUT",
+								"method": "POST",
 								"header": [
 									{
 										"key": "Content-Type",
@@ -325,7 +274,7 @@
 								],
 								"body": {
 									"mode": "raw",
-									"raw": "{\r\n    \"username\": \"pperic\",\r\n    \"password\": \"nekaLozinka\"\r\n}"
+									"raw": "{\r\n    \"username\": \"ppetrovic\",\r\n    \"password\": \"TajnaLozinkaNeka!\"\r\n}"
 								},
 								"url": {
 									"raw": "http://localhost:3000/api/administrator/",
@@ -341,69 +290,8 @@
 									]
 								}
 							},
-							"status": "OK",
-							"code": 200,
-							"_postman_previewlanguage": "json",
-							"header": [
-								{
-									"key": "X-Powered-By",
-									"value": "Express"
-								},
-								{
-									"key": "Content-Type",
-									"value": "application/json; charset=utf-8"
-								},
-								{
-									"key": "Content-Length",
-									"value": "187"
-								},
-								{
-									"key": "ETag",
-									"value": "W/\"bb-DiUjm7hr5yd0OGJpRgeirudiyXU\""
-								},
-								{
-									"key": "Date",
-									"value": "Fri, 21 Aug 2020 10:17:51 GMT"
-								},
-								{
-									"key": "Connection",
-									"value": "keep-alive"
-								}
-							],
-							"cookie": [],
-							"body": "{\n    \"username\": \"pperic\",\n    \"passwordHash\": \"9D1B1DB471F692E6736119A0AF99BF5E20D4DB137E75A6665DDDABE58DBACB2A35A2B5A726D4D66C15F3B17B72193EB79C513CCFD377F47164C261837EC0AF87\",\n    \"administratorId\": 5\n}"
-						},
-						{
-							"name": "Add a new administrator - error- username taken",
-							"originalRequest": {
-								"method": "PUT",
-								"header": [
-									{
-										"key": "Content-Type",
-										"value": "application/json",
-										"type": "text"
-									}
-								],
-								"body": {
-									"mode": "raw",
-									"raw": "{\r\n    \"username\": \"mmarkovic\",\r\n    \"password\": \"nekaTajnijaLozinka\"\r\n}"
-								},
-								"url": {
-									"raw": "http://localhost:3000/api/administrator/",
-									"protocol": "http",
-									"host": [
-										"localhost"
-									],
-									"port": "3000",
-									"path": [
-										"api",
-										"administrator",
-										""
-									]
-								}
-							},
-							"status": "OK",
-							"code": 200,
+							"status": "Created",
+							"code": 201,
 							"_postman_previewlanguage": "json",
 							"header": [
 								{
@@ -424,7 +312,7 @@
 								},
 								{
 									"key": "Date",
-									"value": "Fri, 21 Aug 2020 10:40:16 GMT"
+									"value": "Wed, 09 Sep 2020 12:44:11 GMT"
 								},
 								{
 									"key": "Connection",
@@ -433,42 +321,9 @@
 							],
 							"cookie": [],
 							"body": "{\n    \"status\": \"error\",\n    \"statusCode\": -1001,\n    \"message\": null\n}"
-						}
-					]
-				},
-				{
-					"name": "Edit an existing administrator",
-					"request": {
-						"method": "POST",
-						"header": [
-							{
-								"key": "Content-Type",
-								"value": "application/json",
-								"type": "text"
-							}
-						],
-						"body": {
-							"mode": "raw",
-							"raw": "{\r\n    \"password\": \"nekaNovaLozinkaZaOvogAdministratora123\"\r\n}"
 						},
-						"url": {
-							"raw": "http://localhost:3000/api/administrator/1/",
-							"protocol": "http",
-							"host": [
-								"localhost"
-							],
-							"port": "3000",
-							"path": [
-								"api",
-								"administrator",
-								"1",
-								""
-							]
-						}
-					},
-					"response": [
 						{
-							"name": "Edit an administrator",
+							"name": "Add a new administrator",
 							"originalRequest": {
 								"method": "POST",
 								"header": [
@@ -480,10 +335,10 @@
 								],
 								"body": {
 									"mode": "raw",
-									"raw": "{\r\n    \"password\": \"nekaNovaLozinkaZaOvogAdministratora123\"\r\n}"
+									"raw": "{\r\n    \"username\": \"ppetrovic\",\r\n    \"password\": \"TajnaLozinkaNeka!\"\r\n}"
 								},
 								"url": {
-									"raw": "http://localhost:3000/api/administrator/1/",
+									"raw": "http://localhost:3000/api/administrator/",
 									"protocol": "http",
 									"host": [
 										"localhost"
@@ -492,7 +347,6 @@
 									"path": [
 										"api",
 										"administrator",
-										"1",
 										""
 									]
 								}
@@ -511,15 +365,15 @@
 								},
 								{
 									"key": "Content-Length",
-									"value": "188"
+									"value": "190"
 								},
 								{
 									"key": "ETag",
-									"value": "W/\"bc-r1cUNQ+Vh1ttUfVIzu1t9M+uEag\""
+									"value": "W/\"be-gX4NAqKMXwUkCq/3HtshQhYM8s0\""
 								},
 								{
 									"key": "Date",
-									"value": "Fri, 21 Aug 2020 10:49:20 GMT"
+									"value": "Wed, 09 Sep 2020 12:38:19 GMT"
 								},
 								{
 									"key": "Connection",
@@ -527,14 +381,109 @@
 								}
 							],
 							"cookie": [],
-							"body": "{\n    \"administratorId\": 1,\n    \"username\": \"mladjan\",\n    \"passwordHash\": \"083F1BC212F01AF4B896DFF47525F732DDE865F24A2719DF3D1A4C6B2E99A57B996288DB8363F3E4EF3C330ED9D71DB65E4D2F4CFB067532CA814F210CCA883F\"\n}"
+							"body": "{\n    \"username\": \"ppetrovic\",\n    \"passwordHash\": \"4604554F615AD7089B1690CEFE0205CDB7766EFB4AC3C0F635EC40725D605F43DE200ED32A622F65D81EEFC29D0F4058E71556F4A36CB79C1C74EABEE7BFF680\",\n    \"administratorId\": 9\n}"
+						}
+					]
+				},
+				{
+					"name": "Edit an existing administrator",
+					"request": {
+						"method": "PATCH",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"password\": \"NovalozinkaZaovogAdmina123\"\r\n}"
+						},
+						"url": {
+							"raw": "http://localhost:3000/api/administrator/2/",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"administrator",
+								"2",
+								""
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Edit an existing administrator",
+							"originalRequest": {
+								"method": "PATCH",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/json",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"password\": \"NovalozinkaZaovogAdmina123\"\r\n}"
+								},
+								"url": {
+									"raw": "http://localhost:3000/api/administrator/2/",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "3000",
+									"path": [
+										"api",
+										"administrator",
+										"2",
+										""
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "190"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"be-b7G67dbYCJng/BBJaAkIa6D9eXo\""
+								},
+								{
+									"key": "Date",
+									"value": "Wed, 09 Sep 2020 12:41:48 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"administratorId\": 2,\n    \"username\": \"test_user\",\n    \"passwordHash\": \"34CEF2F906994B3E6D5FA42B566519E6C461CF16BEDAC2C3776D358A35024D6F83C35B57FE5BCCADFD71F428034FD300386EF215811F15185E252754822CFA2A\"\n}"
 						}
 					]
 				},
 				{
 					"name": "Edit a non-existing administrator",
 					"request": {
-						"method": "POST",
+						"method": "PATCH",
 						"header": [
 							{
 								"key": "Content-Type",
@@ -1015,7 +964,7 @@
 			"name": "Product",
 			"item": [
 				{
-					"name": "Get all products",
+					"name": "Get many products",
 					"request": {
 						"method": "GET",
 						"header": [],
@@ -1093,7 +1042,7 @@
 						"method": "GET",
 						"header": [],
 						"url": {
-							"raw": "http://localhost:3000/api/product/1/",
+							"raw": "http://localhost:3000/api/product/3/",
 							"protocol": "http",
 							"host": [
 								"localhost"
@@ -1102,7 +1051,7 @@
 							"path": [
 								"api",
 								"product",
-								"1",
+								"3",
 								""
 							]
 						}
@@ -1227,10 +1176,10 @@
 						],
 						"body": {
 							"mode": "raw",
-							"raw": "{\r\n    \"title\": \"Airmax32\",\r\n    \"description\": \"Neki opis55...\",\r\n    \"categoryId\": 1,\r\n    \"price\": 67.67,\r\n    \"materialId\": 2,\r\n    \"quantity\": 12,\r\n    \"size\": 44,\r\n    \"color\": \"Blue\"\r\n}"
+							"raw": "{\r\n    \"title\": \"Nike1\",\r\n    \"description\": \"Neki opis ovih patika,neki opis ovih patika,neki opis ovih patika ...\",\r\n    \"categoryId\": 1,\r\n    \"price\": 43.22,\r\n    \"materialId\": 3,\r\n    \"quantity\": 15,\r\n    \"size\": 41,\r\n    \"color\": \"Black\"\r\n}"
 						},
 						"url": {
-							"raw": "http://localhost:3000/api/product/createFull/",
+							"raw": "http://localhost:3000/api/product/",
 							"protocol": "http",
 							"host": [
 								"localhost"
@@ -1239,7 +1188,6 @@
 							"path": [
 								"api",
 								"product",
-								"createFull",
 								""
 							]
 						}
@@ -1320,12 +1268,15 @@
 								{
 									"key": "picture",
 									"type": "file",
-									"src": "/C:/Users/Baza/Desktop/patika2.jpg"
+									"src": "/C:/Users/Baza/Desktop/Sorel.jpg"
 								}
-							]
+							],
+							"options": {
+								"formdata": {}
+							}
 						},
 						"url": {
-							"raw": "http://localhost:3000/api/product/1/uploadPicture/",
+							"raw": "http://localhost:3000/api/product/38/uploadPicture/",
 							"protocol": "http",
 							"host": [
 								"localhost"
@@ -1334,7 +1285,7 @@
 							"path": [
 								"api",
 								"product",
-								"1",
+								"38",
 								"uploadPicture",
 								""
 							]
@@ -1476,7 +1427,7 @@
 						"header": [],
 						"body": {
 							"mode": "raw",
-							"raw": "{\r\n    \"title\": \"Airmax12\",\r\n    \"description\": \"Neki opis132...\",\r\n    \"categoryId\": 1,\r\n    \"price\": 60.27,\r\n    \"productMaterialId\": 2,\r\n    \"quantity\": 222,\r\n    \"size\": 44,\r\n    \"color\": \"Blue\"\r\n}",
+							"raw": "{\r\n    \"title\": \"Papuce123\",\r\n    \"description\": \"Neki opis123...\",\r\n    \"categoryId\": 3,\r\n    \"price\": 50.22,\r\n    \"productMaterialId\": 1,\r\n    \"quantity\": 111,\r\n    \"size\": 39,\r\n    \"color\": \"Blue\"\r\n}",
 							"options": {
 								"raw": {
 									"language": "json"
@@ -1484,7 +1435,7 @@
 							}
 						},
 						"url": {
-							"raw": "http://localhost:3000/api/product/4/",
+							"raw": "http://localhost:3000/api/product/2/",
 							"protocol": "http",
 							"host": [
 								"localhost"
@@ -1493,7 +1444,7 @@
 							"path": [
 								"api",
 								"product",
-								"4",
+								"2",
 								""
 							]
 						}
@@ -1640,6 +1591,161 @@
 							"body": "{\n    \"status\": \"Ok\",\n    \"statusCode\": 0,\n    \"message\": \"One photo deleted!\"\n}"
 						}
 					]
+				},
+				{
+					"name": "Search products",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"categoryId\": 1,\r\n    \"color\": \"Purple\",\r\n    \"keywords\": \"air\",\r\n    \"priceMin\": 43,\r\n    \"priceMax\": 61,\r\n    \"orderBy\": \"price\",\r\n    \"orderDirection\": \"ASC\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3000/api/product/search",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"product",
+								"search"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Search products",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"categoryId\": 1,\r\n    \"keywords\": \"air\",\r\n    \"color\": \"Purple\",\r\n    \"priceMin\": 43,\r\n    \"priceMax\": 61,\r\n    \"orderBy\": \"title\",\r\n    \"orderDirection\": \"ASC\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:3000/api/product/search",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "3000",
+									"path": [
+										"api",
+										"product",
+										"search"
+									]
+								}
+							},
+							"status": "Created",
+							"code": 201,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "635"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"27b-k5EfVWv65vlbkftbLQey9TebgCI\""
+								},
+								{
+									"key": "Date",
+									"value": "Wed, 16 Sep 2020 12:43:00 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								}
+							],
+							"cookie": [],
+							"body": "[\n    {\n        \"productId\": 4,\n        \"title\": \"Airmax44\",\n        \"description\": \"Neki opis44...\",\n        \"categoryId\": 1,\n        \"productMaterialId\": 1,\n        \"category\": {\n            \"categoryId\": 1,\n            \"name\": \"Sneakers\",\n            \"imagePath\": \"assets/patike.jpg\"\n        },\n        \"productMaterial\": {\n            \"productMaterialId\": 1,\n            \"materialName\": \"Rubber\"\n        },\n        \"productPrices\": [\n            {\n                \"productPriceId\": 3,\n                \"productId\": 4,\n                \"price\": \"67.67\",\n                \"createdAt\": \"2020-08-27T11:12:28.000Z\"\n            },\n            {\n                \"productPriceId\": 8,\n                \"productId\": 4,\n                \"price\": \"60.27\",\n                \"createdAt\": \"2020-09-03T16:41:45.000Z\"\n            },\n            {\n                \"productPriceId\": 9,\n                \"productId\": 4,\n                \"price\": \"60.44\",\n                \"createdAt\": \"2020-09-07T15:49:12.000Z\"\n            }\n        ],\n        \"inStocks\": [\n            {\n                \"inStockId\": 40,\n                \"quantity\": 12,\n                \"size\": 43,\n                \"color\": \"Purple\",\n                \"productId\": 4\n            }\n        ],\n        \"pictures\": []\n    }\n]"
+						},
+						{
+							"name": "Search products ",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"categoryId\": 1,\r\n    \"keywords\": \"air\",\r\n    \"priceMin\": 43,\r\n    \"priceMax\": 61,\r\n    \"orderBy\": \"title\",\r\n    \"orderDirection\": \"ASC\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:3000/api/product/search",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "3000",
+									"path": [
+										"api",
+										"product",
+										"search"
+									]
+								}
+							},
+							"status": "Created",
+							"code": 201,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "1459"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"5b3-XYF2HtbyQNpj9pK637U2nQT+4lc\""
+								},
+								{
+									"key": "Date",
+									"value": "Fri, 11 Sep 2020 18:10:38 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								}
+							],
+							"cookie": [],
+							"body": "[\n    {\n        \"productId\": 1,\n        \"title\": \"Airmax2\",\n        \"description\": \"Neki opis1...\",\n        \"categoryId\": 1,\n        \"productMaterialId\": 2,\n        \"category\": {\n            \"categoryId\": 1,\n            \"name\": \"Sneakers\",\n            \"imagePath\": \"assets/patike.jpg\"\n        },\n        \"productMaterial\": {\n            \"productMaterialId\": 2,\n            \"materialName\": \"Leather\"\n        },\n        \"productPrices\": [\n            {\n                \"productPriceId\": 1,\n                \"productId\": 1,\n                \"price\": \"45.00\",\n                \"createdAt\": \"2020-08-24T11:09:01.000Z\"\n            },\n            {\n                \"productPriceId\": 2,\n                \"productId\": 1,\n                \"price\": \"43.00\",\n                \"createdAt\": \"2020-08-24T11:09:11.000Z\"\n            }\n        ],\n        \"inStocks\": [\n            {\n                \"inStockId\": 1,\n                \"quantity\": 25,\n                \"size\": 43,\n                \"color\": \"Blue\",\n                \"productId\": 1\n            },\n            {\n                \"inStockId\": 3,\n                \"quantity\": 10,\n                \"size\": 44,\n                \"color\": \"Black\",\n                \"productId\": 1\n            },\n            {\n                \"inStockId\": 5,\n                \"quantity\": 5,\n                \"size\": 45,\n                \"color\": \"Black\",\n                \"productId\": 1\n            },\n            {\n                \"inStockId\": 9,\n                \"quantity\": 20,\n                \"size\": 40,\n                \"color\": \"Black\",\n                \"productId\": 1\n            }\n        ],\n        \"pictures\": [\n            {\n                \"pictureId\": 5,\n                \"productId\": 1,\n                \"imagePath\": \"202092-9229461786-patika2.jpg\"\n            },\n            {\n                \"pictureId\": 6,\n                \"productId\": 1,\n                \"imagePath\": \"202093-7870572246-patika.jpg\"\n            }\n        ]\n    },\n    {\n        \"productId\": 4,\n        \"title\": \"Airmax44\",\n        \"description\": \"Neki opis44...\",\n        \"categoryId\": 1,\n        \"productMaterialId\": 1,\n        \"category\": {\n            \"categoryId\": 1,\n            \"name\": \"Sneakers\",\n            \"imagePath\": \"assets/patike.jpg\"\n        },\n        \"productMaterial\": {\n            \"productMaterialId\": 1,\n            \"materialName\": \"Rubber\"\n        },\n        \"productPrices\": [\n            {\n                \"productPriceId\": 3,\n                \"productId\": 4,\n                \"price\": \"67.67\",\n                \"createdAt\": \"2020-08-27T11:12:28.000Z\"\n            },\n            {\n                \"productPriceId\": 8,\n                \"productId\": 4,\n                \"price\": \"60.27\",\n                \"createdAt\": \"2020-09-03T16:41:45.000Z\"\n            },\n            {\n                \"productPriceId\": 9,\n                \"productId\": 4,\n                \"price\": \"60.44\",\n                \"createdAt\": \"2020-09-07T15:49:12.000Z\"\n            }\n        ],\n        \"inStocks\": [],\n        \"pictures\": []\n    }\n]"
+						}
+					]
 				}
 			],
 			"event": [
@@ -1670,22 +1776,22 @@
 			"name": "Auth",
 			"item": [
 				{
-					"name": "Login-Auth",
+					"name": "Administrator Login-Auth",
 					"request": {
 						"method": "POST",
 						"header": [
 							{
 								"key": "Content-Type",
-								"value": "application/json",
-								"type": "text"
+								"type": "text",
+								"value": "application/json"
 							}
 						],
 						"body": {
 							"mode": "raw",
-							"raw": "{\r\n    \"username\": \"admin\",\r\n    \"password\": \"admin\"\r\n}"
+							"raw": "{\r\n    \"username\": \"admin123\",\r\n    \"password\": \"admin123\"\r\n}"
 						},
 						"url": {
-							"raw": "http://localhost:3000/auth/login/",
+							"raw": "http://localhost:3000/auth/administrator/login/",
 							"protocol": "http",
 							"host": [
 								"localhost"
@@ -1693,6 +1799,7 @@
 							"port": "3000",
 							"path": [
 								"auth",
+								"administrator",
 								"login",
 								""
 							]
@@ -1881,6 +1988,157 @@
 							],
 							"cookie": [],
 							"body": "{\n    \"status\": \"error\",\n    \"statusCode\": -3002,\n    \"message\": null\n}"
+						}
+					]
+				},
+				{
+					"name": "Refresh admin token",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"token\": \"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJyb2xlIjoiYWRtaW5pc3RyYXRvciIsImFkbWluaXN0cmF0b3JJZCI6MTEsInVzZXJuYW1lIjoiYWRtaW4xMjMiLCJleHAiOjE2MDI1OTg1MzQuNTQ1LCJpcCI6Ijo6MSIsInVhIjoiUG9zdG1hblJ1bnRpbWUvNy4yNi41IiwiaWF0IjoxNTk5OTIwMTM0fQ.PzjDsmH7xVUW10OVdYYNFAXuMgvNvC9DcF_5do4Y3xs\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3000/auth/administrator/refresh",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"auth",
+								"administrator",
+								"refresh"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Refresh admin token / refreshing token",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"token\": \"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJyb2xlIjoiYWRtaW5pc3RyYXRvciIsImFkbWluaXN0cmF0b3JJZCI6MTEsInVzZXJuYW1lIjoiYWRtaW4xMjMiLCJleHAiOjE2MDI1OTg1MzQuNTQ1LCJpcCI6Ijo6MSIsInVhIjoiUG9zdG1hblJ1bnRpbWUvNy4yNi41IiwiaWF0IjoxNTk5OTIwMTM0fQ.PzjDsmH7xVUW10OVdYYNFAXuMgvNvC9DcF_5do4Y3xs\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:3000/auth/administrator/refresh",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "3000",
+									"path": [
+										"auth",
+										"administrator",
+										"refresh"
+									]
+								}
+							},
+							"status": "Created",
+							"code": 201,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "674"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"2a2-8CurGzcgWJxDogNPFbUWVDX0oFY\""
+								},
+								{
+									"key": "Date",
+									"value": "Sat, 12 Sep 2020 15:06:23 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"administratorId\": 11,\n    \"username\": \"admin123\",\n    \"token\": \"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJyb2xlIjoiYWRtaW5pc3RyYXRvciIsImFkbWluaXN0cmF0b3JJZCI6MTEsInVzZXJuYW1lIjoiYWRtaW4xMjMiLCJleHAiOjE1OTk5MjM0ODMuNjg5LCJpcCI6Ijo6MSIsInVhIjoiUG9zdG1hblJ1bnRpbWUvNy4yNi41IiwiaWF0IjoxNTk5OTIzMTgzfQ.i-W0STAHui3woD1yOW8lMuYplwpzRpBUot4KjzXOXdQ\",\n    \"refreshToken\": \"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJyb2xlIjoiYWRtaW5pc3RyYXRvciIsImFkbWluaXN0cmF0b3JJZCI6MTEsInVzZXJuYW1lIjoiYWRtaW4xMjMiLCJleHAiOjE2MDI1OTg1MzQuNTQ1LCJpcCI6Ijo6MSIsInVhIjoiUG9zdG1hblJ1bnRpbWUvNy4yNi41IiwiaWF0IjoxNTk5OTIwMTM0fQ.PzjDsmH7xVUW10OVdYYNFAXuMgvNvC9DcF_5do4Y3xs\",\n    \"refreshTokenExpiresAt\": \"2020-10-13T14:15:34.545Z\"\n}"
+						},
+						{
+							"name": "Refresh admin token / token is not valid",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"token\": \"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJyb2xlIjoiYWRtaW5pc3RyYXRvciIsImFkbWluaXN0cmF0b3JJZCI6MTEsInVzZXJuYW1lIjoiYWRtaW4xMjMiLCJleHAiOjE2MDI1OTg1MzQuNTQ1LCJpcCI6Ijo6MSIsInVhIjoiUG9zdG1hblJ1bnRpbWUvNy4yNi41IiwiaWF0IjoxNTk5OTIwMTM0fQ.PzjDsmH7xVUW10OVdYYNFAXuMgvNvC9DcF_5do4Y3xs\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:3000/auth/administrator/refresh",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "3000",
+									"path": [
+										"auth",
+										"administrator",
+										"refresh"
+									]
+								}
+							},
+							"status": "Created",
+							"code": 201,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "79"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"4f-206pchMUUICBt/3siRe8l0lU0ZE\""
+								},
+								{
+									"key": "Date",
+									"value": "Sat, 12 Sep 2020 15:08:52 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"status\": \"error\",\n    \"statusCode\": -10003,\n    \"message\": \"The token is no longer valid\"\n}"
 						}
 					]
 				}
@@ -2119,7 +2377,7 @@
 						"header": [],
 						"body": {
 							"mode": "raw",
-							"raw": "{\r\n    \"quantity\": 22,\r\n    \"size\": 40,\r\n    \"color\": \"Black\",\r\n    \"productId\": 1\r\n\r\n}",
+							"raw": "{\r\n    \"quantity\": 15,\r\n    \"size\": 41,\r\n    \"color\": \"Black\",\r\n    \"productId\": 6\r\n\r\n}",
 							"options": {
 								"raw": {
 									"language": "json"
@@ -2210,7 +2468,7 @@
 						"header": [],
 						"body": {
 							"mode": "raw",
-							"raw": "{\r\n    \"quantity\": 20\r\n}",
+							"raw": "{\r\n    \"quantity\": 15,\r\n    \"size\": 40,\r\n    \"color\": \"Black\"\r\n}",
 							"options": {
 								"raw": {
 									"language": "json"
@@ -2293,6 +2551,71 @@
 							],
 							"cookie": [],
 							"body": "{\n    \"inStockId\": 9,\n    \"quantity\": 20,\n    \"size\": 40,\n    \"color\": \"Black\",\n    \"productId\": 1,\n    \"product\": {\n        \"productId\": 1,\n        \"title\": \"Airmax2\",\n        \"description\": \"Neki opis1...\",\n        \"categoryId\": 1,\n        \"productMaterialId\": 2\n    }\n}"
+						},
+						{
+							"name": "Edit a single Stock",
+							"originalRequest": {
+								"method": "PATCH",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"quantity\": 15,\r\n    \"size\": 40,\r\n    \"color\": \"Black\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:3000/api/inStock/9/",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "3000",
+									"path": [
+										"api",
+										"inStock",
+										"9",
+										""
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "180"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"b4-cFWAGZaROmjOl1DeQKwawIrKzq4\""
+								},
+								{
+									"key": "Date",
+									"value": "Wed, 16 Sep 2020 12:26:14 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"inStockId\": 9,\n    \"quantity\": 15,\n    \"size\": 40,\n    \"color\": \"Black\",\n    \"productId\": 1,\n    \"product\": {\n        \"productId\": 1,\n        \"title\": \"Airmax2\",\n        \"description\": \"Neki opis1...\",\n        \"categoryId\": 1,\n        \"productMaterialId\": 2\n    }\n}"
 						}
 					]
 				}
@@ -2327,7 +2650,7 @@
 		"bearer": [
 			{
 				"key": "token",
-				"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJhZG1pbmlzdHJhdG9ySWQiOjgsInVzZXJuYW1lIjoiYWRtaW4iLCJleHAiOjE2MDAyNjgxNzQuNzAzLCJpcCI6Ijo6MSIsInVhIjoiUG9zdG1hblJ1bnRpbWUvNy4yNi4zIiwiaWF0IjoxNTk5MDU4NTc0fQ.5CdptoGvYfvdbSC1zFrGBDC8c9HKrTzrbXw8p4TaaoQ",
+				"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJyb2xlIjoiYWRtaW5pc3RyYXRvciIsImFkbWluaXN0cmF0b3JJZCI6MTEsInVzZXJuYW1lIjoiYWRtaW4xMjMiLCJleHAiOjE2MDAzNTY5ODkuMjYxLCJpcCI6Ijo6MSIsInVhIjoiUG9zdG1hblJ1bnRpbWUvNy4yNi41IiwiaWF0IjoxNjAwMzU2Njg5fQ.Kn8V4QYOwWSNAu7XD1LB-ws8PN5djwDZk8BoRFFi6eU",
 				"type": "string"
 			}
 		]
