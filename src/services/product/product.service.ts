@@ -1,7 +1,7 @@
 import { Injectable } from "@nestjs/common";
 import { TypeOrmCrudService } from "@nestjsx/crud-typeorm";
 import { InjectRepository } from "@nestjs/typeorm";
-import { Repository, In } from "typeorm";
+import { Repository } from "typeorm";
 import { Product } from "src/entities/product.entity";
 import { AddProductDto } from "src/dtos/product/add.product.dto";
 import { ApiResponse } from "src/misc/api.response.class";
@@ -212,13 +212,3 @@ export class ProductService extends TypeOrmCrudService<Product> {
     }
     
 }
-// return await this.product.find({
-//   where: { productId: In(productIds) },
-//   relations: [
-//     "category",
-//     "productMaterial",
-//     "productPrices",
-//     "inStocks",
-//     "pictures"
-//   ]
-// });
