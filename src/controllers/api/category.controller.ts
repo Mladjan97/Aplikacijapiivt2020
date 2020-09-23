@@ -54,7 +54,7 @@ import { RoleCheckerGuard } from "src/misc/role.checker.guard";
                 UseGuards(RoleCheckerGuard),
                 AllowToRoles("administrator"),
             ],
-         }, 
+         },
     },
 })
 export class CategoryController {

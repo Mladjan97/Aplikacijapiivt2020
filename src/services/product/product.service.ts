@@ -210,5 +210,27 @@ export class ProductService extends TypeOrmCrudService<Product> {
       return products;
       
     }
+
+    async getProducts(): Promise<Product[] | ApiResponse> {
+      const categories = await this.product.find();
+      if (categories.length === 0) {
+          return new ApiResponse('ok', -4001, 'There is no data in database');
+      }
+      if (!categories) {
+          return new ApiResponse('error', -4002, 'Cannot find any data');
+      }
+
+      return categories;
+  }
+
+  async getProductById(id: number): Promise<Product | ApiResponse> {
+      const category = await this.product.findOne(id);
+
+      if(!category) {
+          return new ApiResponse('error', -4003, 'This category doesnt exists');
+      }
+
+      return category;
+  }
     
 }

@@ -21,6 +21,7 @@ import { PictureService } from './services/picture/picture.service';
 import { InStockService } from './services/inStock/in-stock.service';
 import { InStockController } from './controllers/api/in-stock.controller';
 import { AdminToken } from './entities/admin-token.entity';
+import { VisitorController } from './controllers/api/visitor.controller';
 
 @Module({
   imports: [
@@ -60,6 +61,7 @@ import { AdminToken } from './entities/admin-token.entity';
     ProductController,
     AuthController,
     InStockController,
+    VisitorController,
   ],
   providers: [
     AdministratorService,

@@ -249,11 +249,11 @@ export class ProductController {
             return new ApiResponse('Ok', 0, 'One photo deleted!');
         }
 
-    @Post('search')
-    @UseGuards(RoleCheckerGuard)
-    @AllowToRoles('administrator')
-    async search(@Body() data: ProductSearchDto): Promise <Product[] | ApiResponse> {
-        return await this.service.search(data);
-    }
+        @Post('search')
+        @UseGuards(RoleCheckerGuard)
+        @AllowToRoles('administrator')
+        async search(@Body() data: ProductSearchDto): Promise <Product[] | ApiResponse> {
+            return await this.service.search(data);
+        }
 
 }
