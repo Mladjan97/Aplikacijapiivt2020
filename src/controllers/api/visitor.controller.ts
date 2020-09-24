@@ -5,6 +5,8 @@ import { Category } from "src/entities/category.entity";
 import { ApiResponse } from "src/misc/api.response.class";
 import { ProductSearchDto } from "src/dtos/product/product.search.dto";
 import { Product } from "src/entities/product.entity";
+import { ProductMaterial } from "src/entities/product-material.entity";
+import { MaterialService } from "src/services/material/material.service";
 
 @Controller('visitor/')
 export class VisitorController {
@@ -12,6 +14,7 @@ export class VisitorController {
     constructor(
         private readonly categoryService: CategoryService,
         private readonly productService: ProductService,
+        private readonly materialService: MaterialService,
         ) {}
         
         @Get('category')
@@ -39,4 +42,13 @@ export class VisitorController {
             return await this.productService.getProductById(id);
         }
 
+        @Get('material')
+        async getMaterials(): Promise<ProductMaterial[] | ApiResponse> {        
+        return await this.materialService.getMaterials();
+        }
+
+        @Get('material/:id')
+        async getMaterialById(@Param('id') id: number): Promise <ProductMaterial | ApiResponse> {
+            return await this.materialService.getMaterialById(id);
+        }
 }
