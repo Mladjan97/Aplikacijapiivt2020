@@ -23,6 +23,7 @@ import { InStockController } from './controllers/api/in-stock.controller';
 import { AdminToken } from './entities/admin-token.entity';
 import { VisitorController } from './controllers/api/visitor.controller';
 import { MaterialService } from './services/material/material.service';
+import { ProductMaterialController } from './controllers/api/material.controller';
 
 @Module({
   imports: [
@@ -63,6 +64,7 @@ import { MaterialService } from './services/material/material.service';
     AuthController,
     InStockController,
     VisitorController,
+    ProductMaterialController,
   ],
   providers: [
     AdministratorService,
