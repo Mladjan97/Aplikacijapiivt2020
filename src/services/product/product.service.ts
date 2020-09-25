@@ -32,7 +32,7 @@ export class ProductService extends TypeOrmCrudService<Product> {
         newProduct.title             = data.title;
         newProduct.description       = data.description;
         newProduct.categoryId        = data.categoryId;
-        newProduct.productMaterialId = data.materialId;
+        newProduct.productMaterialId = data.productMaterialId;
 
       const savedProduct = await this.product.save(newProduct);
 
@@ -42,13 +42,13 @@ export class ProductService extends TypeOrmCrudService<Product> {
 
       await this.productPrice.save(newProductPrice);
       
-      const newInStock: InStock = new InStock();
-      newInStock.productId = savedProduct.productId;
-      newInStock.quantity  = data.quantity;
-      newInStock.size      = data.size;
-      newInStock.color     = data.color;
+      // const newInStock: InStock = new InStock();
+      // newInStock.productId = savedProduct.productId;
+      // newInStock.quantity  = data.quantity;
+      // newInStock.size      = data.size;
+      // newInStock.color     = data.color;
 
-      await this.inStock.save(newInStock);
+      // await this.inStock.save(newInStock);
 
       return await this.product.findOne(savedProduct.productId, {
           relations: [
@@ -95,27 +95,27 @@ export class ProductService extends TypeOrmCrudService<Product> {
         }
       }
 
-     const newSize = Number(data.size);
-     const lastS = existingProduct.inStocks[existingProduct.inStocks.length-1].size;
-     const lastSize = Number(lastS);
+    //  const newSize = Number(data.size);
+    //  const lastS = existingProduct.inStocks[existingProduct.inStocks.length-1].size;
+    //  const lastSize = Number(lastS);
 
-     const newColorString = String(data.color);
-      const lastC = existingProduct.inStocks[existingProduct.inStocks.length-1].color;
-      const lastColorString = String(lastC);
+    //  const newColorString = String(data.color);
+    //   const lastC = existingProduct.inStocks[existingProduct.inStocks.length-1].color;
+    //   const lastColorString = String(lastC);
 
-      if (newSize === lastSize && newColorString === lastColorString) {
-        await this.inStock.remove(existingProduct.inStocks);
-        const newProductQuantity = new InStock();
-        newProductQuantity.productId = productId;
-        newProductQuantity.quantity  = data.quantity;
-        newProductQuantity.size      = data.size;
-        newProductQuantity.color      = data.color;
+    //   if (newSize === lastSize && newColorString === lastColorString) {
+    //     await this.inStock.remove(existingProduct.inStocks);
+    //     const newProductQuantity = new InStock();
+    //     newProductQuantity.productId = productId;
+    //     newProductQuantity.quantity  = data.quantity;
+    //     newProductQuantity.size      = data.size;
+    //     newProductQuantity.color      = data.color;
 
-        const savedProductQuantity = await this.inStock.save(newProductQuantity);
-        if (!savedProductQuantity) {
-          return new ApiResponse('error', -5003, 'Could not save the new product quantity.');
-        }
-      }
+    //     const savedProductQuantity = await this.inStock.save(newProductQuantity);
+    //     if (!savedProductQuantity) {
+    //       return new ApiResponse('error', -5003, 'Could not save the new product quantity.');
+    //     }
+    //   }
 
       return await this.product.findOne(productId, {
           relations: [
@@ -139,7 +139,7 @@ export class ProductService extends TypeOrmCrudService<Product> {
       builder.leftJoinAndSelect("product.inStocks", "is");
       builder.leftJoinAndSelect("product.pictures", "pictures");
 
-      builder.where('product.productMaterialId = :productMaterialId', { productMaterialId: data.materialId });
+      builder.where('product.productMaterialId = :productMaterialId', { productMaterialId: data.productMaterialId });
       
       
 

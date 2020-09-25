@@ -24,26 +24,26 @@ export class EditProductDto {
   })
     price: number;
 
-    @Validator.IsNotEmpty()
-    @Validator.IsPositive()
-    @Validator.IsNumber({
-      allowInfinity: false,
-      allowNaN: false,
-      maxDecimalPlaces: 0,
-    })
-    quantity: number
+  //   @Validator.IsNotEmpty()
+  //   @Validator.IsPositive()
+  //   @Validator.IsNumber({
+  //     allowInfinity: false,
+  //     allowNaN: false,
+  //     maxDecimalPlaces: 0,
+  //   })
+  //   quantity: number
 
-    @Validator.IsNotEmpty()
-    @Validator.IsPositive()
-    @Validator.IsNumber({
-    allowInfinity: false,
-    allowNaN: false,
-    maxDecimalPlaces: 0,
-  })
-    size: number;
+  //   @Validator.IsNotEmpty()
+  //   @Validator.IsPositive()
+  //   @Validator.IsNumber({
+  //   allowInfinity: false,
+  //   allowNaN: false,
+  //   maxDecimalPlaces: 0,
+  // })
+  //   size: number;
 
-    @Validator.IsNotEmpty()
-    @Validator.IsString()
-    @Validator.Length(3,50)
-    color: string;
+  //   @Validator.IsNotEmpty()
+  //   @Validator.IsString()
+  //   @Validator.Length(3,50)
+  //   color: string;
 }

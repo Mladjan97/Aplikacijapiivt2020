@@ -22,7 +22,7 @@ export class ProductSearchDto {
         allowNaN: false,
         maxDecimalPlaces: 0,
     })
-    materialId: number;
+    productMaterialId: number;
 
     @Validator.IsOptional()
     size: number;
