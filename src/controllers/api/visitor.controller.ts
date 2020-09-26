@@ -6,7 +6,6 @@ import { ApiResponse } from "src/misc/api.response.class";
 import { ProductSearchDto } from "src/dtos/product/product.search.dto";
 import { Product } from "src/entities/product.entity";
 import { Crud } from "@nestjsx/crud";
-import { PictureService } from "src/services/picture/picture.service";
 
 @Controller('visitor/')
 @Crud({
@@ -68,7 +67,4 @@ export class VisitorController {
         async search(@Body() data: ProductSearchDto): Promise <Product[] | ApiResponse> {
         return await this.productService.search(data);
         }
-
-        
-
 }
