@@ -5,11 +5,51 @@ import { Category } from "src/entities/category.entity";
 import { ApiResponse } from "src/misc/api.response.class";
 import { ProductSearchDto } from "src/dtos/product/product.search.dto";
 import { Product } from "src/entities/product.entity";
+import { Crud } from "@nestjsx/crud";
+import { PictureService } from "src/services/picture/picture.service";
 
 @Controller('visitor/')
+@Crud({
+    model: {
+        type: Product
+    },
+    params: {
+        id: {
+            field: 'productId',
+            type: 'number',
+            primary: true
+        }
+    },
+    query: {
+        join: {
+            category: {
+                eager: true
+            },
+            pictures: {
+                eager: true
+            },
+            productMaterial: {
+                eager: true   
+            },
+            productPrices: {
+                eager: true
+            },
+            inStocks: {
+                eager: true
+            }
+        }
+    },
+    routes: {
+        only: [
+            "getOneBase",
+            "getManyBase",
+        ],
+    },
+})
 export class VisitorController {
     
     constructor(
+        public service: ProductService,
         private readonly categoryService: CategoryService,
         private readonly productService: ProductService,
         ) {}
@@ -29,14 +69,6 @@ export class VisitorController {
         return await this.productService.search(data);
         }
 
-        @Get('product')
-        async getProducts(): Promise<Product[] | ApiResponse> {        
-        return await this.productService.getProducts();
-        }
         
-        @Get('product/:id')
-        async getProductById(@Param('id') id: number): Promise <Product | ApiResponse> {
-            return await this.productService.getProductById(id);
-        }
 
 }
